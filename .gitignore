@@ -1,0 +1,10 @@
+#VSCode Specific
+.vscode
+*.code-workspace
+
+#Python Specific
+__pycache__
+venv
+
+
+*.temp
