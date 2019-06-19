@@ -166,8 +166,8 @@ class pdftotext_dump_extract:
 
         raw_data = raw_data.splitlines()
 
-        LINE_SEMESTER = 10  # Semester , Programme Code, Scheme ID
-        LINE_SUBJ_START = 16  # Subject Details
+        LINE_SEMESTER = 7  # Semester , Programme Code, Scheme ID
+        LINE_SUBJ_START = 11  # Subject Details
         SUBJ_GAP = 1    # Gap btw two consecutive subject lines
 
         semester = cls._get_semester(raw_data[LINE_SEMESTER])
