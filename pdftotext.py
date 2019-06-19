@@ -109,6 +109,11 @@ def iter_pages(pdf_file, start=1, end=None, simple=True, layout=False,
                       bom=False, opw=None, upw=None, no_error_msg=True, cfg_file=None, verbose=False)
 
 
+def get_page(pdf_file, pg_no, **kwargs):
+    """Get text from page at given index in pdf"""
+    return convert(pdf_file, None, pg_no, pg_no, **kwargs)
+
+
 def bin_version():
     """Not Implemented"""
     # TODO: Func should return version number of binary
