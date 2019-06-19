@@ -1,4 +1,5 @@
 from subprocess import Popen
+from util import count_pdf_pages
 
 
 PDFTOTXT_BIN = "bin/pdftotext.exe"
@@ -83,15 +84,26 @@ def convert(pdf_file, output=None, start=None, end=None, simple=True, layout=Fal
                 "'output' should be either a file name or file handler capable of handling write.")
 
 
+def iter_pages(pdf_file, start=1, end=None, simple=True, layout=False,
+                   table=False, lineprinter=False, raw=False, fixed_pitch=None, linespacing=None,
+                   clip=False, no_diag=False, encoding=None, eol=None, no_pgbreak=False,
+                   bom=False, opw=None, upw=None, no_error_msg=True, cfg_file=None, verbose=False):
+    if not end:
+        end = count_pdf_pages(pdf_file)
+    for pg_no in range(start, end + 1):
+        yield convert(pdf_file, None, pg_no, pg_no, simple=True, layout=False,
+                      table=False, lineprinter=False, raw=False, fixed_pitch=None, linespacing=None,
+                      clip=False, no_diag=False, encoding=None, eol=None, no_pgbreak=False,
+                      bom=False, opw=None, upw=None, no_error_msg=True, cfg_file=None, verbose=False)
+
+
 def bin_version():
     """Not Implemented"""
     # TODO: Func should return version number of binary
     pass
 
+
 def update():
     """Not Implemented"""
     # TODO: Implement binary update, retrive changelog and new binary from their website and check hashes for security
     pass
-
-
-
