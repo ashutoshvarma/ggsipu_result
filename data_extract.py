@@ -130,35 +130,10 @@ class pdftotext_dump_extract:
     def iter_subjects(cls, raw_data):
         raw_data = raw_data.splitlines()
 
-        # Compiled Regex
-        # RE_COLON_NUM = re.compile(r"""
-        #                     (?::\s*0*)  #Match : followed by spaces and 0s (Non-Matching Group)
-        #                     (\d+)       # Match digits
-        #                     """, re.VERBOSE)
-
-        # RE_BTW_PARANTHESES = re.compile(r"""
-        #                     \(          #Match Opening Parantheses
-        #                     ([^)]+)     #Match characters except ')' one or more (Capturing Group)
-        #                     \)          #Match Closing Parantheses
-        #                     """, re.VERBOSE)
-
-        # CONSTANTS
-        # LINE_PRE_DATE = 2  # Prepared Date
-        # LINE_DEC_DATE = 4  # Declared Date
         LINE_SEMESTER = 10  # Semester , Programme Code, Scheme ID
-
         LINE_SUBJ_START = 16  # Subject Details
         SUBJ_GAP = 1    # Gap btw two consecutive subject lines
 
-        # # Prepared Date
-        # prepared_date = cls._get_scheme_dates(raw_data[LINE_PRE_DATE])
-
-        # # Declared Date
-        # declared_date = cls._get_scheme_dates(raw_data[LINE_DEC_DATE])
-
-        # Semester, Programme Code, Scheme ID
-        # programme_code, scheme_id, semester = RE_COLON_NUM.findall(
-        #    raw_data[LINE_SEMESTER])
         semester = cls._get_semester(raw_data[LINE_SEMESTER])
 
         for raw in raw_data[LINE_SUBJ_START::SUBJ_GAP+1]:
