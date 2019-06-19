@@ -229,4 +229,4 @@ class pdftotext_dump_extract:
                     temp_mark = Marks(
                         paper_id, mark[0], mark[1], total_grade[0], total_grade[1])
                     new_result.add_mark(paper_id, temp_mark)
-                    yield new_result
+                yield new_result
