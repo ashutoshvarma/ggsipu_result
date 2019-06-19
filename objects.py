@@ -79,6 +79,9 @@ class Result:
             self.marks[paper_id] = mark
         else:
             raise TypeError("paper_id should be of int type")
+    
+    def __str__(self):
+        return "Result: [{self.roll_num}]{self.student_name}({self.batch}) Semester: {self.semester}".format(self=self)
 
     
 
