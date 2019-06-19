@@ -2,9 +2,17 @@
 """
 
 from enum import Enum
+import json
 
 
-class Subject:
+class JSONSerializable:
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
+
+    def __repr__(self):
+        return self.toJSON()
+
+class Subject(JSONSerializable):
     def __init__(self, paper_id, paper_code=None, name=None, credit=None, minor_max=None,
                  major_max=None, type=None, department=None, mode=None, kind=None, semester=None):
         self.paper_id = paper_id
@@ -36,7 +44,7 @@ class Subject:
         return self.paper_id == other
 
 
-class Marks:
+class Marks(JSONSerializable):
     def __init__(self, paper_id, minor, major, total, grade=None):
         self.paper_id = paper_id
         self.minor = minor
@@ -48,7 +56,7 @@ class Marks:
         return "[{self.paper_id}] Minor-{self.minor}, Major-{self.major}, Total-{self.total}".format(self=self)
 
 
-class Result:
+class Result(JSONSerializable):
 
     def __init__(self, roll_num, semester, student_name=None, batch=None, marks={}):
         self.semester = semester
@@ -79,13 +87,12 @@ class Result:
             self.marks[paper_id] = mark
         else:
             raise TypeError("paper_id should be of int type")
-    
+
     def __str__(self):
         return "Result: [{self.roll_num}]{self.student_name}({self.batch}) Semester: {self.semester}".format(self=self)
 
-    
 
-class Student:
+class Student(JSONSerializable):
     def __init__(self, roll_num, full_name=None, batch_year=None):
         self.name = full_name
         self.id = roll_num
