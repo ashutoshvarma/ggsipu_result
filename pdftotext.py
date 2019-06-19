@@ -1,3 +1,15 @@
+# -*- coding: utf-8 -*
+"""pdftotext python wrapper
+
+This module provide wrapper functions for pdftotext binary.
+
+TODO:
+    * TODO _invoke_bin
+    * TODO convert
+    * implement update func
+    * implement bin_version func
+"""
+
 from subprocess import Popen
 from util import count_pdf_pages
 

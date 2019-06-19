@@ -1,3 +1,6 @@
+"""Module having classes for data storing.
+"""
+
 from enum import Enum
 
 
@@ -47,9 +50,12 @@ class Marks:
 
 class Result:
 
-    def __init__(self, semester, marks={}):
+    def __init__(self, roll_num, semester, student_name=None, batch=None, marks={}):
         self.semester = semester
         self.marks = marks
+        self.roll_num = roll_num
+        self.student_name = student_name
+        self.batch = batch
 
     def get_mark_drops(self):
         # for paper_id, mark in self.marks.items():
@@ -64,8 +70,7 @@ class Result:
         return self.marks[paper_id]
 
     def get_marks(self, min_marks=0, max_marks=Subject.max_marks()):
-        """
-        Return the marks whose total is more than 'min_marks' and more than 'max_marks'
+        """Return the marks whose total is more than 'min_marks' and more than 'max_marks'
         """
         return [item[1] for item in self.marks.items() if min_marks <= item[1].total <= max_marks]
 
@@ -85,8 +90,7 @@ class Student:
         self.results = {}
 
     def iter_results(self):
-        """
-        Return ilterable object of all results.
+        """Return generator object of all results.
         """
         for sem in self.results:
             yield self.results[sem]
@@ -95,8 +99,8 @@ class Student:
         return self.results[sem]
 
     def add_result(self, res, semester):
-        """
-        Add the result to results dict.
+        """Add the result to results dict.
+
         If result for semester is already present then it ignores current.
         """
         if not semester in self.results:
@@ -105,8 +109,7 @@ class Student:
         #     raise Exception("Result for semester {} is already present.".format(semester))
 
     def update_result(self, res, semester):
-        """
-        Update the result for given semester.
+        """Update the result for given semester.
         """
         if isinstance(semester, int):
             self.results[semester] = res

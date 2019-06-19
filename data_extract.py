@@ -1,3 +1,16 @@
+# -*- coding: utf-8 -*
+"""Data Extraction module
+
+This module provide classes to extract required data from
+string data formatted in a known manner. Extracted data will
+be returned in a suitable objects. For each type of string format
+there are specialised classes.
+
+TODO:
+    None
+"""
+
+
 from objects import Student, Marks, Result, Subject
 from util import rm_extra_whitespace, group_iter
 import re
@@ -110,6 +123,9 @@ class pdftotext_dump_extract:
 
     @staticmethod
     def has_page_subejcts(pg_data):
+        """Check if page contains subjects data.
+        """
+
         RE_IS_SUBJECT_PAGE = re.compile(r"\(.*SCHEME.+OF.+EXAMINATIONS*\)")
         match = RE_IS_SUBJECT_PAGE.search(pg_data)
         if match:
@@ -119,6 +135,9 @@ class pdftotext_dump_extract:
 
     @staticmethod
     def has_page_results(pg_data):
+        """Check if page contains results data.
+        """
+
         RE_IS_RESULTS_PAGE = re.compile(r"RESULT.+TABULATION.+SHEET")
         match = RE_IS_RESULTS_PAGE.search(pg_data)
         if match:
@@ -128,6 +147,19 @@ class pdftotext_dump_extract:
 
     @classmethod
     def iter_subjects(cls, raw_data, force=False):
+        """Iterate through subjects extracted from page data.
+
+        Retieves the subject data from given page data assuming the 
+        data to be from pdftotext with -simple flag. If force param is False
+        it wont't check for data format.
+
+        Args:
+            raw_data: Raw data of a single page.
+            force: If True, check whether data contains subjects or not.
+
+        Returns:
+            A generator object of Subject type.
+        """
         if not cls.has_page_subejcts(raw_data):
             return None
 
@@ -144,6 +176,19 @@ class pdftotext_dump_extract:
 
     @classmethod
     def iter_results(cls, raw_data, force=False):
+        """Iterate through results extracted from page data.
+
+        Retieves the results data from given page data assuming the 
+        data to be from pdftotext with -simple flag. If force param is False
+        it wont't check for data format.
+
+        Args:
+            raw_data: Raw data of a single page.
+            force: If True, check whether data contains subjects or not.
+
+        Returns:
+            A generator object of Result type.
+        """
         if not cls.has_page_results(raw_data):
             return None
 
@@ -184,4 +229,3 @@ class pdftotext_dump_extract:
                         paper_id, mark[0], mark[1], total_grade[0], total_grade[1])
                     new_result.add_mark(paper_id, temp_mark)
                     yield new_result
-        
