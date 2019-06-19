@@ -56,7 +56,7 @@ class pdftotext_dump_extract:
         # Number of items to ignore in data.split() as they contain
         # 'SID:' and sid number
         NUM_WORDS_IGNORE = 2
-        DEFAULT_MARKS = 0
+        DEFAULT_MARKS = None
         data = data.split()[NUM_WORDS_IGNORE:]
         return group_iter(data, 2, DEFAULT_MARKS)
 
