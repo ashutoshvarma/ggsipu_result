@@ -161,7 +161,7 @@ class pdftotext_dump_extract:
         Returns:
             A generator object of Subject type.
         """
-        if not cls.has_page_subejcts(raw_data):
+        if force and not cls.has_page_subejcts(raw_data):
             return None
 
         raw_data = raw_data.splitlines()
@@ -190,7 +190,7 @@ class pdftotext_dump_extract:
         Returns:
             A generator object of Result type.
         """
-        if not cls.has_page_results(raw_data):
+        if force and not cls.has_page_results(raw_data):
             return None
 
         raw_data = raw_data.splitlines()
