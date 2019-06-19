@@ -224,8 +224,7 @@ class pdftotext_dump_extract:
 
                 new_result = Result(roll_match.group(), semester, name, batch)
                 for paper_id, mark, total_grade in zip(paper_ids, raw_marks, total_and_grades):
-                    # for m in mark:
-                    #     m = m if m.isdigit() else None
+                    
                     minor = int(mark[0]) if mark[0].isdigit() else None
                     major = int(mark[1]) if mark[1].isdigit() else None
 
