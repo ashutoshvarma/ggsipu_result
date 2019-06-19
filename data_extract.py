@@ -31,7 +31,7 @@ class pdftotext_dump_extract:
         # other than digit + ':' + zero or more '0's
         RE_SEMESTER = re.compile(r'(?:Sem\D*:\s*0*)(\d+)')
         match = RE_SEMESTER.search(data)
-        return match.group(1) if match else None
+        return int(match.group(1)) if match else None
 
     @staticmethod
     def _get_batch(data):
@@ -39,7 +39,7 @@ class pdftotext_dump_extract:
         # other than digit + ':' + zero or more '0's
         RE_BATCH = re.compile(r'(?:Batch\D*:\s*0*)(\d+)')
         match = RE_BATCH.search(data)
-        return match.group() if match else None
+        return int(match.group(1)) if match else None
 
     @staticmethod
     def _iter_paper_ids(data):
