@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*
-"""Data Extraction module
+"""Data Processing module
 
 This module provide classes to extract required data from
 string data formatted in a known manner. Extracted data will
