@@ -48,7 +48,8 @@ class pdftotext_dump_extract:
         for word in data.split():
             match = RE_PAPER_ID.search(word)
             paper_id = match.group() if match else None
-            yield paper_id
+            if paper_id:
+                yield int(paper_id)
 
     @staticmethod
     def _iter_marks(data):
