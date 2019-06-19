@@ -127,7 +127,10 @@ class pdftotext_dump_extract:
             return False
 
     @classmethod
-    def iter_subjects(cls, raw_data):
+    def iter_subjects(cls, raw_data, force=False):
+        if not cls.has_page_subejcts(raw_data):
+            return None
+
         raw_data = raw_data.splitlines()
 
         LINE_SEMESTER = 10  # Semester , Programme Code, Scheme ID
@@ -140,7 +143,10 @@ class pdftotext_dump_extract:
             yield cls._get_subject(raw, semester)
 
     @classmethod
-    def iter_results(cls, raw_data):
+    def iter_results(cls, raw_data, force=False):
+        if not cls.has_page_results(raw_data):
+            return None
+
         raw_data = raw_data.splitlines()
 
         LINE_SEMESTER_BATCH = 17
@@ -178,9 +184,4 @@ class pdftotext_dump_extract:
                         paper_id, mark[0], mark[1], total_grade[0], total_grade[1])
                     new_result.add_mark(paper_id, temp_mark)
                     yield new_result
-
-
-    @classmethod
-    def get_all(cls, raw_data):
-        """Return tuple of results list and subjects list extracted from """
-        pass
+        
