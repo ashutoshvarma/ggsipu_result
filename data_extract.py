@@ -16,7 +16,7 @@ from util import rm_extra_whitespace, group_iter
 import re
 
 
-class pdftotext_dump_extract:
+class pdftotext_dump:
 
     @staticmethod
     def _get_scheme_dates(data):
