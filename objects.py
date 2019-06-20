@@ -12,6 +12,7 @@ class JSONSerializable:
     def __repr__(self):
         return self.toJSON()
 
+
 class Subject(JSONSerializable):
     def __init__(self, paper_id, paper_code=None, name=None, credit=None, minor_max=None,
                  major_max=None, type=None, department=None, mode=None, kind=None, semester=None):
@@ -93,11 +94,16 @@ class Result(JSONSerializable):
 
 
 class Student(JSONSerializable):
-    def __init__(self, roll_num, full_name=None, batch_year=None):
+    def __init__(self, roll_num, full_name=None, batch_year=None, programme_code=None,
+                 programme_name=None, institution_code=None, institution_name=None):
         self.name = full_name
         self.id = roll_num
         self.batch = batch_year
         self.results = {}
+        self.programme_code = programme_code
+        self.programme_name = programme_name
+        self.institution_code = institution_code
+        self.institution_name = institution_name
 
     def iter_results(self):
         """Return generator object of all results.
