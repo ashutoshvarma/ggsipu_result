@@ -170,6 +170,10 @@ class pdftotext_dump:
         LINE_SUBJ_START = 11  # Subject Details
         SUBJ_GAP = 1    # Gap btw two consecutive subject lines
 
+        # Check for data length
+        if max((LINE_SEMESTER, LINE_SUBJ_START)) + 1 < len(raw_data):
+            return None
+
         semester = cls._get_semester(raw_data[LINE_SEMESTER])
 
         for raw in raw_data[LINE_SUBJ_START::SUBJ_GAP+1]:
@@ -200,6 +204,10 @@ class pdftotext_dump:
         GAP_MARKS = 2
         GAP_NAME = 1
 
+        # Check for data length
+        if LINE_SEMESTER_BATCH + 1 < len(raw_data):
+            return None
+
         # Match whole 11 digits number
         RE_ROLL_NUM = re.compile(r'\b\d{11}\b')
 
@@ -224,7 +232,7 @@ class pdftotext_dump:
 
                 new_result = Result(roll_match.group(), semester, name, batch)
                 for paper_id, mark, total_grade in zip(paper_ids, raw_marks, total_and_grades):
-                    
+
                     minor = int(mark[0]) if mark[0].isdigit() else None
                     major = int(mark[1]) if mark[1].isdigit() else None
 
