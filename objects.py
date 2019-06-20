@@ -1,7 +1,6 @@
 """Module having classes for data storing.
 """
 
-from enum import Enum
 import json
 
 
