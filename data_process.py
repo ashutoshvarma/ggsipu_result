@@ -82,10 +82,16 @@ class pdftotext_dump:
         data_split = data.split()[NUM_WORDS_IGNORE:]
         for line in data_split:
             ex_data = RE_BTW_PARANTHESES.split(line)
-            if len(ex_data) == 1:
-                yield ex_data[0], None
+            marks = None
+            grade = None
+            try:
+                marks = int(ex_data[0])
+            except:
+                grade = ex_data[0]
             else:
-                yield ex_data[:2]
+                grade = ex_data[1] if len(ex_data) >= 2 else ex_data[0]
+            finally:
+                yield marks, grade
 
     @staticmethod
     def _get_subject(data, semester=None):
