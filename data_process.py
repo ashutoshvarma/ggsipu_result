@@ -16,6 +16,16 @@ from util import rm_extra_whitespace, group_iter
 import re
 
 
+
+class DataProcessingError(Exception):
+    pass
+
+class DataNotSufficientError(DataProcessingError):
+    pass
+
+class DataNotFoundError(DataProcessingError):
+    pass
+
 class pdftotext_dump:
 
     @staticmethod
@@ -135,10 +145,8 @@ class pdftotext_dump:
 
         RE_IS_SUBJECT_PAGE = re.compile(r"\(.*SCHEME.+OF.+EXAMINATIONS*\)")
         match = RE_IS_SUBJECT_PAGE.search(pg_data)
-        if match:
-            return True
-        else:
-            return False
+
+        return True if match else False
 
     @staticmethod
     def has_page_results(pg_data):
@@ -147,10 +155,8 @@ class pdftotext_dump:
 
         RE_IS_RESULTS_PAGE = re.compile(r"RESULT.+TABULATION.+SHEET")
         match = RE_IS_RESULTS_PAGE.search(pg_data)
-        if match:
-            return True
-        else:
-            return False
+
+        return True if match else False
 
     @classmethod
     def iter_subjects(cls, raw_data, force=False):
@@ -162,13 +168,20 @@ class pdftotext_dump:
 
         Args:
             raw_data: Raw data of a single page.
-            force: If True, check whether data contains subjects or not.
+            force: Whether to raise exception when data does not contain
+                   subject details.
 
         Returns:
             A generator object of Subject type.
+
+        Raise:
+            DataNotFoundError: When 'force' is True and data does not contain any 
+                               subject details.
+            DataNotSufficientError: When given data does not have minimum requried 
+                                    lines for processing.
         """
         if force and not cls.has_page_subejcts(raw_data):
-            return None
+            raise DataNotFoundError
 
         raw_data = raw_data.splitlines()
 
@@ -178,7 +191,7 @@ class pdftotext_dump:
 
         # Check for data length
         if max((LINE_SEMESTER, LINE_SUBJ_START)) + 1 < len(raw_data):
-            return None
+            raise DataNotSufficientError
 
         semester = cls._get_semester(raw_data[LINE_SEMESTER])
 
@@ -195,13 +208,20 @@ class pdftotext_dump:
 
         Args:
             raw_data: Raw data of a single page.
-            force: If True, check whether data contains subjects or not.
+            force: Whether to raise exception when data does not contain
+                   result details.
 
         Returns:
             A generator object of Result type.
+
+        Raise:
+            DataNotFoundError: When 'force' is True and data does not contain any 
+                               result details.
+            DataNotSufficientError: When given data does not have minimum requried 
+                                    lines for processing.
         """
         if force and not cls.has_page_results(raw_data):
-            return None
+            raise DataNotFoundError
 
         raw_data = raw_data.splitlines()
 
@@ -212,7 +232,7 @@ class pdftotext_dump:
 
         # Check for data length
         if LINE_SEMESTER_BATCH + 1 < len(raw_data):
-            return None
+            raise DataNotSufficientError
 
         # Match whole 11 digits number
         RE_ROLL_NUM = re.compile(r'\b\d{11}\b')
