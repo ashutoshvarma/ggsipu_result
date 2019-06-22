@@ -27,6 +27,7 @@ class DataNotFoundError(DataProcessingError):
     pass
 
 class pdftotext_dump:
+    """Class for processing data dumped from pdftotext binary"""
 
     @staticmethod
     def _get_scheme_dates(data):
