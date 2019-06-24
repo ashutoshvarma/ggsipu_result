@@ -16,21 +16,24 @@ from util import rm_extra_whitespace, group_iter
 import re
 
 
-
 class DataProcessingError(Exception):
     pass
+
 
 class DataNotSufficientError(DataProcessingError):
     pass
 
+
 class DataNotFoundError(DataProcessingError):
     pass
+
 
 class pdftotext_dump:
     """Class for processing data dumped from pdftotext binary"""
 
     @staticmethod
     def _get_scheme_dates(data):
+        """Get first occurance of date in 'dd/mm/yyy' format."""
         # Capture Date of format dd/mm/yyy
         RE_DATE = re.compile(r"\d{2}/\d{2}/\d{4}")
         match = RE_DATE.search(data)
@@ -38,23 +41,41 @@ class pdftotext_dump:
 
     @staticmethod
     def _get_semester(data):
-        # Match one or more numbers prefix by 'Sem' + any
-        # other than digit + ':' + zero or more '0's
+        """
+        Returns the semester number in given data
+        
+        Match one or more digits prefix by 'Sem' + any
+        other than digit + ':' + zero or more '0's
+        """
         RE_SEMESTER = re.compile(r'(?:Sem\D*:\s*0*)(\d+)')
         match = RE_SEMESTER.search(data)
         return int(match.group(1)) if match else None
 
     @staticmethod
     def _get_batch(data):
-        # Match one or more numbers prefix by 'Batch' + any
-        # other than digit + ':' + zero or more '0's
+        """
+        Returns the batch year in given data
+
+        Match one or more numbers prefix by 'Batch' + any
+        other than digit + ':' + zero or more '0's
+        """
         RE_BATCH = re.compile(r'(?:Batch\D*:\s*0*)(\d+)')
         match = RE_BATCH.search(data)
         return int(match.group(1)) if match else None
 
     @staticmethod
     def _iter_paper_ids(data):
-        # Match 5 digit number followed by '(' from begininig
+        """
+        Iterate the paper ids in given data
+
+        Match 5 digit number followed by '(' from begininig
+        of each words in given 'data' as paper ids are followed
+        by their credit number.
+        Example:- 98768(3) 98767(2)
+
+        Args:
+            data: Single line of string having paper ids.
+        """
         RE_PAPER_ID = re.compile(r'^\d{5}(?=\()')
         for word in data.split():
             match = RE_PAPER_ID.search(word)
@@ -64,6 +85,12 @@ class pdftotext_dump:
 
     @staticmethod
     def _iter_marks(data):
+        """
+        Iterate the pair of minor and major marks in given 'data'.
+
+        It extract and group the items in 'data.split()' except starting 2 items.
+        """
+
         # Number of items to ignore in data.split() as they contain
         # 'SID:' and sid number
         NUM_WORDS_IGNORE = 2
@@ -75,12 +102,13 @@ class pdftotext_dump:
     def _iter_total_marks(data):
         """
         Return (total, grade) iterable
+
+        Args:
+            data: single line of string having total marks and grade
+
+        Return:
+            genrator object of (total, grade).
         """
-        # RE_TOTAL_MARKS = re.compile(r"""
-        #                             (?P<total>\b\d{2}\b)(?=\()  # whole 2 digits number followed by '('
-        #                             \(                          # Match '('
-        #                             (?P<grade>[^)]+)            # Match any other than ')'
-        #                             """, re.VERBOSE)
 
         # To ignore the first number in data.split() as they contain
         # serial num
@@ -106,6 +134,9 @@ class pdftotext_dump:
 
     @staticmethod
     def _get_subject(data, semester=None):
+        """
+        Extract the subject details from given 'data'.
+        """
         RE_SUBJ_DETAILS = re.compile(r"""
                             (?P<index>\d{,2})\s*
                             (?P<id>\d{5})\s*
