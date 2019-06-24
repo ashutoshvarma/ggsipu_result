@@ -9,12 +9,14 @@ TODO:
     * implement update func
     * implement bin_version func
 """
-
+import os
 from subprocess import Popen
 from util import count_pdf_pages
 
+ROOT = os.path.abspath(os.path.dirname(__file__))
+BIN_ROOT = os.path.join(ROOT, 'bin')
 
-PDFTOTXT_BIN = "bin/pdftotext.exe"
+PDFTOTXT_BIN = os.path.join(BIN_ROOT, 'pdftotext.exe')
 TEMP_FILE = '.temp'
 
 
