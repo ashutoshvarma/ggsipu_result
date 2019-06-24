@@ -42,10 +42,16 @@ class pdftotext_dump:
     @staticmethod
     def _get_semester(data):
         """
-        Returns the semester number in given data
+        Extract the semester number in given data
 
         Match one or more digits prefix by 'Sem' + any
         other than digit + ':' + zero or more '0's
+
+        Args:
+            data: single line of string having semeter details
+
+        Return:
+            int type if semeter number found else None
         """
         RE_SEMESTER = re.compile(r'(?:Sem\D*:\s*0*)(\d+)')
         match = RE_SEMESTER.search(data)
@@ -58,6 +64,12 @@ class pdftotext_dump:
 
         Match one or more numbers prefix by 'Batch' + any
         other than digit + ':' + zero or more '0's
+
+        Args:
+            data: single line of string having batch details       
+
+        Return:
+            int type if batch year found else None 
         """
         RE_BATCH = re.compile(r'(?:Batch\D*:\s*0*)(\d+)')
         match = RE_BATCH.search(data)
@@ -75,20 +87,31 @@ class pdftotext_dump:
 
         Args:
             data: Single line of string having paper ids.
+
+        Return:
+            Generator object of int
         """
         RE_PAPER_ID = re.compile(r'^\d{5}(?=\()')
         for word in data.split():
             match = RE_PAPER_ID.search(word)
             paper_id = match.group() if match else None
             if paper_id:
-                yield paper_id
+                yield int(paper_id)
 
     @staticmethod
     def _iter_marks(data):
         """
         Iterate the pair of minor and major marks in given 'data'.
 
-        It extract and group the items in 'data.split()' except starting 2 items.
+        It extract and group the items in 'data.split()' ignoring 2 items from start.
+
+        Args:
+            data: single line of string having minor and major marks detail.
+
+        Return:
+            iterable object having pair of minor and major marks.
+            NOTE: interger conversion is not performed here hence returned values are
+                  of type string.
         """
 
         # Number of items to ignore in data.split() as they contain
@@ -107,7 +130,7 @@ class pdftotext_dump:
             data: single line of string having total marks and grade
 
         Return:
-            genrator object of (total, grade).
+            genrator object of type (total, grade).
         """
 
         # To ignore the first number in data.split() as they contain
@@ -127,12 +150,22 @@ class pdftotext_dump:
             grade = ex_data[0] if not marks else (
                 ex_data[1] if len(ex_data) > 1 else None)
             if marks or grade:
-                yield marks, grade
+                yield int(marks), grade
 
     @staticmethod
-    def _get_subject(data, semester=None):
+    def _get_subject(data):
         """
         Extract the subject details from given 'data'.
+
+        Args:
+            data: single line of string having subject details.
+
+        Return:
+            dict having extracted data.
+            Example:-
+            {'paper_id': 99887, 'paper_code': 'BA109', 'name': 'Maths',
+            'credit': 2, 'minor_max': 40, 'major_max': 100,
+            'type': sub_type, 'department': exam, 'mode': mode, 'kind': kind}
         """
         RE_SUBJ_DETAILS = re.compile(r"""
                             (?P<index>\d{,2})\s*
@@ -150,6 +183,7 @@ class pdftotext_dump:
 
         subj_match = RE_SUBJ_DETAILS.search(data)
         if subj_match:
+            sub_id = subj_match.group('id')
             minor_max = subj_match.group('minor_max')
             major_max = subj_match.group('major_max')
             credit = subj_match.group("credit")
@@ -161,11 +195,12 @@ class pdftotext_dump:
             name = rm_extra_whitespace(subj_match.group('name'))
 
             # Validation
-            minor_max = minor_max if minor_max.isdigit() else None
-            major_max = major_max if major_max.isdigit() else None
+            minor_max = int(minor_max) if minor_max.isdigit() else None
+            major_max = int(major_max) if major_max.isdigit() else None
 
-            return Subject(subj_match.group('id'), paper_code, name, credit,
-                           minor_max, major_max, sub_type, exam, mode, kind, semester)
+            return {'paper_id': sub_id, 'paper_code': paper_code, 'name': name,
+                    'credit': credit, 'minor_max': minor_max, 'major_max': major_max,
+                    'type': sub_type, 'department': exam, 'mode': mode, 'kind': kind}
 
     @staticmethod
     def has_page_subejcts(pg_data):
@@ -190,7 +225,7 @@ class pdftotext_dump:
     @classmethod
     def iter_subjects(cls, raw_data, force=False):
         """Iterate through subjects extracted from page data.
-        
+
         Retieves the subject data from given page data assuming the
         data to be from pdftotext with -simple flag. If force param is False
         it wont't check for data format.
@@ -225,7 +260,9 @@ class pdftotext_dump:
         semester = cls._get_semester(raw_data[LINE_SEMESTER])
 
         for raw in raw_data[LINE_SUBJ_START::SUBJ_GAP+1]:
-            yield cls._get_subject(raw, semester)
+            subj_details_dict = cls._get_subject(raw)
+            subj_details_dict['semester'] = semester
+            yield Subject(**subj_details_dict)
 
     @classmethod
     def iter_results(cls, raw_data, force=False):
