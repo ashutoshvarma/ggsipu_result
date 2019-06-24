@@ -43,7 +43,7 @@ class pdftotext_dump:
     def _get_semester(data):
         """
         Returns the semester number in given data
-        
+
         Match one or more digits prefix by 'Sem' + any
         other than digit + ':' + zero or more '0's
         """
@@ -81,7 +81,7 @@ class pdftotext_dump:
             match = RE_PAPER_ID.search(word)
             paper_id = match.group() if match else None
             if paper_id:
-                yield int(paper_id)
+                yield paper_id
 
     @staticmethod
     def _iter_marks(data):
@@ -121,15 +121,12 @@ class pdftotext_dump:
         data_split = data.split()[NUM_WORDS_IGNORE:]
         for line in data_split:
             ex_data = RE_BTW_PARANTHESES.split(line)
-            marks = None
-            grade = None
-            try:
-                marks = int(ex_data[0])
-            except:
-                grade = ex_data[0]
-            else:
-                grade = ex_data[1] if len(ex_data) >= 2 else ex_data[0]
-            finally:
+            # If first element is number then it is marks,
+            # if not then it should be grade.
+            marks = ex_data[0] if ex_data[0].isdigit() else None
+            grade = ex_data[0] if not marks else (
+                ex_data[1] if len(ex_data) > 1 else None)
+            if marks or grade:
                 yield marks, grade
 
     @staticmethod
@@ -193,8 +190,8 @@ class pdftotext_dump:
     @classmethod
     def iter_subjects(cls, raw_data, force=False):
         """Iterate through subjects extracted from page data.
-
-        Retieves the subject data from given page data assuming the 
+        
+        Retieves the subject data from given page data assuming the
         data to be from pdftotext with -simple flag. If force param is False
         it wont't check for data format.
 
@@ -207,9 +204,9 @@ class pdftotext_dump:
             A generator object of Subject type.
 
         Raise:
-            DataNotFoundError: When 'force' is True and data does not contain any 
+            DataNotFoundError: When 'force' is True and data does not contain any
                                subject details.
-            DataNotSufficientError: When given data does not have minimum requried 
+            DataNotSufficientError: When given data does not have minimum requried
                                     lines for processing.
         """
         if force and not cls.has_page_subejcts(raw_data):
@@ -234,7 +231,7 @@ class pdftotext_dump:
     def iter_results(cls, raw_data, force=False):
         """Iterate through results extracted from page data.
 
-        Retieves the results data from given page data assuming the 
+        Retieves the results data from given page data assuming the
         data to be from pdftotext with -simple flag. If force param is False
         it wont't check for data format.
 
@@ -247,9 +244,9 @@ class pdftotext_dump:
             A generator object of Result type.
 
         Raise:
-            DataNotFoundError: When 'force' is True and data does not contain any 
+            DataNotFoundError: When 'force' is True and data does not contain any
                                result details.
-            DataNotSufficientError: When given data does not have minimum requried 
+            DataNotSufficientError: When given data does not have minimum requried
                                     lines for processing.
         """
         if force and not cls.has_page_results(raw_data):
