@@ -139,11 +139,11 @@ def _iter_total_marks(data):
         ex_data = RE_BTW_PARANTHESES.split(line)
         # If first element is number then it is marks,
         # if not then it should be grade.
-        marks = ex_data[0] if ex_data[0].isdigit() else None
+        marks = int(ex_data[0]) if ex_data[0].isdigit() else None
         grade = ex_data[0] if not marks else (
             ex_data[1] if len(ex_data) > 1 else None)
         if marks or grade:
-            yield int(marks), grade
+            yield marks, grade
 
 def _get_subject(data):
     """
