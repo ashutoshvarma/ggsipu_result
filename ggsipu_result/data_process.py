@@ -54,6 +54,7 @@ def _get_semester(data):
     match = RE_SEMESTER.search(data)
     return int(match.group(1)) if match else None
 
+
 def _get_batch(data):
     """
     Returns the batch year in given data
@@ -70,6 +71,7 @@ def _get_batch(data):
     RE_BATCH = re.compile(r'(?:Batch\D*:\s*0*)(\d+)')
     match = RE_BATCH.search(data)
     return int(match.group(1)) if match else None
+
 
 def _iter_paper_ids(data):
     """
@@ -93,6 +95,7 @@ def _iter_paper_ids(data):
         if paper_id:
             yield int(paper_id)
 
+
 def _iter_marks(data):
     """
     Iterate the pair of minor and major marks in given 'data'.
@@ -114,6 +117,7 @@ def _iter_marks(data):
     DEFAULT_MARKS = None
     data = data.split()[NUM_WORDS_IGNORE:]
     return group_iter(data, 2, DEFAULT_MARKS)
+
 
 def _iter_total_marks(data):
     """
@@ -144,6 +148,7 @@ def _iter_total_marks(data):
             ex_data[1] if len(ex_data) > 1 else None)
         if marks or grade:
             yield marks, grade
+
 
 def _get_subject(data):
     """
@@ -194,6 +199,7 @@ def _get_subject(data):
                 'credit': credit, 'minor_max': minor_max, 'major_max': major_max,
                 'type': sub_type, 'department': exam, 'mode': mode, 'kind': kind}
 
+
 def has_page_subejcts(pg_data):
     """Check if page contains subjects data.
     """
@@ -203,6 +209,7 @@ def has_page_subejcts(pg_data):
 
     return True if match else False
 
+
 def has_page_results(pg_data):
     """Check if page contains results data.
     """
@@ -211,6 +218,7 @@ def has_page_results(pg_data):
     match = RE_IS_RESULTS_PAGE.search(pg_data)
 
     return True if match else False
+
 
 def iter_subjects(raw_data, force=False):
     """Iterate through subjects extracted from page data.
@@ -250,8 +258,9 @@ def iter_subjects(raw_data, force=False):
 
     for raw in raw_data[LINE_SUBJ_START::SUBJ_GAP+1]:
         subj_details_dict = _get_subject(raw)
-        subj_details_dict['semester'] = semester
-        yield Subject(**subj_details_dict)
+        if subj_details_dict:
+            subj_details_dict['semester'] = semester
+            yield Subject(**subj_details_dict)
 
 
 def iter_results(raw_data, force=False):
