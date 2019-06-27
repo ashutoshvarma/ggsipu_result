@@ -243,7 +243,7 @@ def iter_subjects(raw_data, force=False):
     SUBJ_GAP = 1    # Gap btw two consecutive subject lines
 
     # Check for data length
-    if max((LINE_SEMESTER, LINE_SUBJ_START)) + 1 < len(raw_data):
+    if max((LINE_SEMESTER, LINE_SUBJ_START)) + 1 > len(raw_data):
         raise DataNotSufficientError
 
     semester = _get_semester(raw_data[LINE_SEMESTER])
@@ -286,7 +286,7 @@ def iter_results(raw_data, force=False):
     GAP_NAME = 1
 
     # Check for data length
-    if LINE_SEMESTER_BATCH + 1 < len(raw_data):
+    if LINE_SEMESTER_BATCH + 1 > len(raw_data):
         raise DataNotSufficientError
 
     # Match whole 11 digits number
