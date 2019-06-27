@@ -1,0 +1,31 @@
+                                                                                                                                                                                                                                                                                                                                                                         RESULT
+                                                                                                                                                                                                                                                                                                                                                  Prepared   Date:  07/06/2019
+                                                                                                                                                                                                                                                                                                                                                   Declared   Date:07/06/2019
+                                                                                                                                                                                                                                                                                                                                                               Page  No.:  0005
+
+                                                                                                               (SCHEME          OF         EXAMINATIONS)
+
+        Scheme  of  Programme   Code:  032       Programme   Name:  BACHELOR   OF TECHNOLOGY     (COMPUTER  SCIENCE   AND  ENGINEERING)         SchemeID:   190322015001         Sem./Year:   05 SEMESTER
+        Institution   Code:   164      Institution:    UNIVERSITY   SCHOOL  OF  INFORMATION,   COMMUNICATION    & TECHNOLOGY    (FORMERLY   USIT)
+S.No.  Paper  ID      Code                                                                             Subject                                                                            Credit        Type        Exam         Mode                                                                                     Kind            Minor        Major    Max.  Marks Pass   Marks
+
+  01     15301       IT301     THEORY  OF  COMPUTATION                                                                                                                                        4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  02     15303       IT303     ANALOG  AND  DIGITAL   COMMUNICATION                                                                                                                           4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  03     15305       IT305     COMPUTER   ARCHITECTURE                                                                                                                                        4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  04     15307       IT307     DIGITAL  SIGNAL   PROCESSING                                                                                                                                   4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  05     15309       IT309     OBJECT  ORIENTED   SOFTWARE   ENGINEERING                                                                                                                      4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  06     15311       IT311     DIGITAL  DESIGN   USING  VHDL                                                                                                                                  4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  07     15351       IT351     ANALOG  &  DIGITAL  COMMUNICATION    LAB.                                                                                                                      1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+
+  08     15353       IT353     DIGITAL  SIGNAL   PROCESSING   LAB.                                                                                                                            1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+
+  09     15355       IT355     DIGITAL  DESIGN   LAB.                                                                                                                                         1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+
+  10     15357       IT357     SUMMER  TRAINING   REPORT,   SEMINAR  AND  VIVA  - VOCE                                                                                                        1      PRACTICAL      NUES                                                                                  COMPULSORY        DROPPABLE       --           100          100          40
+

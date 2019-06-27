@@ -2,7 +2,7 @@
 """
 
 import json
-from util import JSONSerializable
+from .util import JSONSerializable
 
 
 class Subject(JSONSerializable):

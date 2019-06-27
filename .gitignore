@@ -5,6 +5,7 @@
 #Python Specific
 __pycache__
 venv
+*.egg-info
 
 
 *.temp

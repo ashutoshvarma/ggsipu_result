@@ -1,0 +1,33 @@
+                                                                                                                                                                                                                                                                                                                                                                         RESULT
+                                                                                                                                                                                                                                                                                                                                                  Prepared   Date:  07/06/2019
+                                                                                                                                                                                                                                                                                                                                                   Declared   Date:07/06/2019
+                                                                                                                                                                                                                                                                                                                                                               Page  No.:  0003
+
+                                                                                                               (SCHEME          OF         EXAMINATIONS)
+
+        Scheme  of  Programme   Code:  032       Programme   Name:  BACHELOR   OF TECHNOLOGY     (COMPUTER  SCIENCE   AND  ENGINEERING)         SchemeID:   190322015001         Sem./Year:   03 SEMESTER
+        Institution   Code:   164      Institution:    UNIVERSITY   SCHOOL  OF  INFORMATION,   COMMUNICATION    & TECHNOLOGY    (FORMERLY   USIT)
+S.No.  Paper  ID      Code                                                                             Subject                                                                            Credit        Type        Exam         Mode                                                                                     Kind            Minor        Major    Max.  Marks Pass   Marks
+
+  01     15201       IT201     COMPUTATIONAL    METHODS                                                                                                                                       4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  02     15203       IT203     CIRCUITS   AND SYSTEMS                                                                                                                                         4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  03     15205       IT205     ELECTRONIC   DEVICES   AND CIRCUITS                                                                                                                            4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  04     15207       IT207     OBJECT  ORIENTED   PROGRAMMING   USING   C++                                                                                                                   4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  05     15209       IT209     COMPUTER   GRAPHICS                                                                                                                                            4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  06     15211       IT211     DATABASE   MANAGEMENT   SYSTEMS                                                                                                                                4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  07     15251       IT251     ELECTRONIC   DEVICES   AND CIRCUITS   LAB                                                                                                                      1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+
+  08     15253       IT253     COMPUTATION   LAB                                                                                                                                              1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+
+  09     15255       IT255     OBJECT  ORIENTED   PROGRAMMING   LAB                                                                                                                           1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+
+  10     15257       IT257     COMPUTER   GRAPHICS  LAB.                                                                                                                                      1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+
+  11     15259       IT259     DBMS  LAB                                                                                                                                                      1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+

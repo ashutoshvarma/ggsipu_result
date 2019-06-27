@@ -1,0 +1,646 @@
+[
+    {
+        "batch": 2018,
+        "marks": {
+            "15105": {
+                "grade": "F",
+                "major": 23,
+                "minor": 8,
+                "paper_id": 15105,
+                "total": 31
+            },
+            "15107": {
+                "grade": "P",
+                "major": 30,
+                "minor": 9,
+                "paper_id": 15107,
+                "total": 40
+            },
+            "15155": {
+                "grade": "A+",
+                "major": 49,
+                "minor": 34,
+                "paper_id": 15155,
+                "total": 83
+            },
+            "15157": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 21,
+                "paper_id": 15157,
+                "total": 55
+            },
+            "15159": {
+                "grade": "A+",
+                "major": 53,
+                "minor": 28,
+                "paper_id": 15159,
+                "total": 81
+            },
+            "98101": {
+                "grade": "A+",
+                "major": 60,
+                "minor": 22,
+                "paper_id": 98101,
+                "total": 82
+            },
+            "98119": {
+                "grade": "B+",
+                "major": 63,
+                "minor": null,
+                "paper_id": 98119,
+                "total": 63
+            },
+            "99103": {
+                "grade": "B+",
+                "major": 40,
+                "minor": 15,
+                "paper_id": 99103,
+                "total": 55
+            },
+            "99109": {
+                "grade": "F",
+                "major": 6,
+                "minor": 5,
+                "paper_id": 99109,
+                "total": 11
+            },
+            "99111": {
+                "grade": "B",
+                "major": 37,
+                "minor": 14,
+                "paper_id": 99111,
+                "total": 51
+            },
+            "99151": {
+                "grade": "A",
+                "major": 44,
+                "minor": 27,
+                "paper_id": 99151,
+                "total": 71
+            },
+            "99153": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 30,
+                "paper_id": 99153,
+                "total": 64
+            }
+        },
+        "roll_num": "70216403218",
+        "semester": 1,
+        "student_name": "SURAJ SAH"
+    },
+    {
+        "batch": 2018,
+        "marks": {
+            "15105": {
+                "grade": "F",
+                "major": 23,
+                "minor": 8,
+                "paper_id": 15105,
+                "total": 31
+            },
+            "15107": {
+                "grade": "P",
+                "major": 30,
+                "minor": 9,
+                "paper_id": 15107,
+                "total": 40
+            },
+            "15155": {
+                "grade": "A+",
+                "major": 49,
+                "minor": 34,
+                "paper_id": 15155,
+                "total": 83
+            },
+            "15157": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 21,
+                "paper_id": 15157,
+                "total": 55
+            },
+            "15159": {
+                "grade": "A+",
+                "major": 53,
+                "minor": 28,
+                "paper_id": 15159,
+                "total": 81
+            },
+            "98101": {
+                "grade": "A+",
+                "major": 60,
+                "minor": 22,
+                "paper_id": 98101,
+                "total": 82
+            },
+            "98119": {
+                "grade": "B+",
+                "major": 63,
+                "minor": null,
+                "paper_id": 98119,
+                "total": 63
+            },
+            "99103": {
+                "grade": "B+",
+                "major": 40,
+                "minor": 15,
+                "paper_id": 99103,
+                "total": 55
+            },
+            "99109": {
+                "grade": "F",
+                "major": 6,
+                "minor": 5,
+                "paper_id": 99109,
+                "total": 11
+            },
+            "99111": {
+                "grade": "B",
+                "major": 37,
+                "minor": 14,
+                "paper_id": 99111,
+                "total": 51
+            },
+            "99151": {
+                "grade": "A",
+                "major": 44,
+                "minor": 27,
+                "paper_id": 99151,
+                "total": 71
+            },
+            "99153": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 30,
+                "paper_id": 99153,
+                "total": 64
+            }
+        },
+        "roll_num": "70316403218",
+        "semester": 1,
+        "student_name": "KUNAL GOENKA"
+    },
+    {
+        "batch": 2018,
+        "marks": {
+            "15105": {
+                "grade": "F",
+                "major": 23,
+                "minor": 8,
+                "paper_id": 15105,
+                "total": 31
+            },
+            "15107": {
+                "grade": "P",
+                "major": 30,
+                "minor": 9,
+                "paper_id": 15107,
+                "total": 40
+            },
+            "15155": {
+                "grade": "A+",
+                "major": 49,
+                "minor": 34,
+                "paper_id": 15155,
+                "total": 83
+            },
+            "15157": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 21,
+                "paper_id": 15157,
+                "total": 55
+            },
+            "15159": {
+                "grade": "A+",
+                "major": 53,
+                "minor": 28,
+                "paper_id": 15159,
+                "total": 81
+            },
+            "98101": {
+                "grade": "A+",
+                "major": 60,
+                "minor": 22,
+                "paper_id": 98101,
+                "total": 82
+            },
+            "98119": {
+                "grade": "B+",
+                "major": 63,
+                "minor": null,
+                "paper_id": 98119,
+                "total": 63
+            },
+            "99103": {
+                "grade": "B+",
+                "major": 40,
+                "minor": 15,
+                "paper_id": 99103,
+                "total": 55
+            },
+            "99109": {
+                "grade": "F",
+                "major": 6,
+                "minor": 5,
+                "paper_id": 99109,
+                "total": 11
+            },
+            "99111": {
+                "grade": "B",
+                "major": 37,
+                "minor": 14,
+                "paper_id": 99111,
+                "total": 51
+            },
+            "99151": {
+                "grade": "A",
+                "major": 44,
+                "minor": 27,
+                "paper_id": 99151,
+                "total": 71
+            },
+            "99153": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 30,
+                "paper_id": 99153,
+                "total": 64
+            }
+        },
+        "roll_num": "70416403218",
+        "semester": 1,
+        "student_name": "AKSHAT TYAGI"
+    },
+    {
+        "batch": 2018,
+        "marks": {
+            "15105": {
+                "grade": "F",
+                "major": 23,
+                "minor": 8,
+                "paper_id": 15105,
+                "total": 31
+            },
+            "15107": {
+                "grade": "P",
+                "major": 30,
+                "minor": 9,
+                "paper_id": 15107,
+                "total": 40
+            },
+            "15155": {
+                "grade": "A+",
+                "major": 49,
+                "minor": 34,
+                "paper_id": 15155,
+                "total": 83
+            },
+            "15157": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 21,
+                "paper_id": 15157,
+                "total": 55
+            },
+            "15159": {
+                "grade": "A+",
+                "major": 53,
+                "minor": 28,
+                "paper_id": 15159,
+                "total": 81
+            },
+            "98101": {
+                "grade": "A+",
+                "major": 60,
+                "minor": 22,
+                "paper_id": 98101,
+                "total": 82
+            },
+            "98119": {
+                "grade": "B+",
+                "major": 63,
+                "minor": null,
+                "paper_id": 98119,
+                "total": 63
+            },
+            "99103": {
+                "grade": "B+",
+                "major": 40,
+                "minor": 15,
+                "paper_id": 99103,
+                "total": 55
+            },
+            "99109": {
+                "grade": "F",
+                "major": 6,
+                "minor": 5,
+                "paper_id": 99109,
+                "total": 11
+            },
+            "99111": {
+                "grade": "B",
+                "major": 37,
+                "minor": 14,
+                "paper_id": 99111,
+                "total": 51
+            },
+            "99151": {
+                "grade": "A",
+                "major": 44,
+                "minor": 27,
+                "paper_id": 99151,
+                "total": 71
+            },
+            "99153": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 30,
+                "paper_id": 99153,
+                "total": 64
+            }
+        },
+        "roll_num": "70516403218",
+        "semester": 1,
+        "student_name": "UTSAV SINGHI"
+    },
+    {
+        "batch": 2018,
+        "marks": {
+            "15105": {
+                "grade": "F",
+                "major": 23,
+                "minor": 8,
+                "paper_id": 15105,
+                "total": 31
+            },
+            "15107": {
+                "grade": "P",
+                "major": 30,
+                "minor": 9,
+                "paper_id": 15107,
+                "total": 40
+            },
+            "15155": {
+                "grade": "A+",
+                "major": 49,
+                "minor": 34,
+                "paper_id": 15155,
+                "total": 83
+            },
+            "15157": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 21,
+                "paper_id": 15157,
+                "total": 55
+            },
+            "15159": {
+                "grade": "A+",
+                "major": 53,
+                "minor": 28,
+                "paper_id": 15159,
+                "total": 81
+            },
+            "98101": {
+                "grade": "A+",
+                "major": 60,
+                "minor": 22,
+                "paper_id": 98101,
+                "total": 82
+            },
+            "98119": {
+                "grade": "B+",
+                "major": 63,
+                "minor": null,
+                "paper_id": 98119,
+                "total": 63
+            },
+            "99103": {
+                "grade": "B+",
+                "major": 40,
+                "minor": 15,
+                "paper_id": 99103,
+                "total": 55
+            },
+            "99109": {
+                "grade": "F",
+                "major": 6,
+                "minor": 5,
+                "paper_id": 99109,
+                "total": 11
+            },
+            "99111": {
+                "grade": "B",
+                "major": 37,
+                "minor": 14,
+                "paper_id": 99111,
+                "total": 51
+            },
+            "99151": {
+                "grade": "A",
+                "major": 44,
+                "minor": 27,
+                "paper_id": 99151,
+                "total": 71
+            },
+            "99153": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 30,
+                "paper_id": 99153,
+                "total": 64
+            }
+        },
+        "roll_num": "70616403218",
+        "semester": 1,
+        "student_name": "TENZIN TSECHOK"
+    },
+    {
+        "batch": 2018,
+        "marks": {
+            "15105": {
+                "grade": "F",
+                "major": 23,
+                "minor": 8,
+                "paper_id": 15105,
+                "total": 31
+            },
+            "15107": {
+                "grade": "P",
+                "major": 30,
+                "minor": 9,
+                "paper_id": 15107,
+                "total": 40
+            },
+            "15155": {
+                "grade": "A+",
+                "major": 49,
+                "minor": 34,
+                "paper_id": 15155,
+                "total": 83
+            },
+            "15157": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 21,
+                "paper_id": 15157,
+                "total": 55
+            },
+            "15159": {
+                "grade": "A+",
+                "major": 53,
+                "minor": 28,
+                "paper_id": 15159,
+                "total": 81
+            },
+            "98101": {
+                "grade": "A+",
+                "major": 60,
+                "minor": 22,
+                "paper_id": 98101,
+                "total": 82
+            },
+            "98119": {
+                "grade": "B+",
+                "major": 63,
+                "minor": null,
+                "paper_id": 98119,
+                "total": 63
+            },
+            "99103": {
+                "grade": "B+",
+                "major": 40,
+                "minor": 15,
+                "paper_id": 99103,
+                "total": 55
+            },
+            "99109": {
+                "grade": "F",
+                "major": 6,
+                "minor": 5,
+                "paper_id": 99109,
+                "total": 11
+            },
+            "99111": {
+                "grade": "B",
+                "major": 37,
+                "minor": 14,
+                "paper_id": 99111,
+                "total": 51
+            },
+            "99151": {
+                "grade": "A",
+                "major": 44,
+                "minor": 27,
+                "paper_id": 99151,
+                "total": 71
+            },
+            "99153": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 30,
+                "paper_id": 99153,
+                "total": 64
+            }
+        },
+        "roll_num": "70716403218",
+        "semester": 1,
+        "student_name": "RASHINDRA YADAV"
+    },
+    {
+        "batch": 2018,
+        "marks": {
+            "15105": {
+                "grade": "F",
+                "major": 23,
+                "minor": 8,
+                "paper_id": 15105,
+                "total": 31
+            },
+            "15107": {
+                "grade": "P",
+                "major": 30,
+                "minor": 9,
+                "paper_id": 15107,
+                "total": 40
+            },
+            "15155": {
+                "grade": "A+",
+                "major": 49,
+                "minor": 34,
+                "paper_id": 15155,
+                "total": 83
+            },
+            "15157": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 21,
+                "paper_id": 15157,
+                "total": 55
+            },
+            "15159": {
+                "grade": "A+",
+                "major": 53,
+                "minor": 28,
+                "paper_id": 15159,
+                "total": 81
+            },
+            "98101": {
+                "grade": "A+",
+                "major": 60,
+                "minor": 22,
+                "paper_id": 98101,
+                "total": 82
+            },
+            "98119": {
+                "grade": "B+",
+                "major": 63,
+                "minor": null,
+                "paper_id": 98119,
+                "total": 63
+            },
+            "99103": {
+                "grade": "B+",
+                "major": 40,
+                "minor": 15,
+                "paper_id": 99103,
+                "total": 55
+            },
+            "99109": {
+                "grade": "F",
+                "major": 6,
+                "minor": 5,
+                "paper_id": 99109,
+                "total": 11
+            },
+            "99111": {
+                "grade": "B",
+                "major": 37,
+                "minor": 14,
+                "paper_id": 99111,
+                "total": 51
+            },
+            "99151": {
+                "grade": "A",
+                "major": 44,
+                "minor": 27,
+                "paper_id": 99151,
+                "total": 71
+            },
+            "99153": {
+                "grade": "B+",
+                "major": 34,
+                "minor": 30,
+                "paper_id": 99153,
+                "total": 64
+            }
+        },
+        "roll_num": "70816403218",
+        "semester": 1,
+        "student_name": "SRISHTI JHA"
+    }
+]

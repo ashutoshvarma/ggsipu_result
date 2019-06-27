@@ -1,0 +1,60 @@
+                                                                                                                                                                                                                                                                                              RESULT   TABULATION                                                                      SHEET
+                                                                                                                                                                                                                                                                                      Result  Prepared                                                                  on:   07/06/2019
+                                                                                                                                                                                                                                                                                      Result  Declared                                                                  on:   07/06/2019
+                                                                                                                                                                                                                                                                                                                                                                        Page    No.:    0023
+                                                                                                                                                                                                                                                                                                                                                                    LEGEND
+
+                                                                                                                                                                                                                                                                                                                                                                           PAPERID(CREDITS)
+
+                                                                                                                                                                                                                                                                                                                                                                        Internal         External
+
+                                                                                                                                                                                                                                                                                                                                                                              TOTAL(GRADE)
+
+                                                                                                                                                                                                                                                                                                                                                                    A: Absent       C:  Cancelled
+                                                                                                                                                                                                                                                                                                                                                                    D: Detained     RL:  Result   Later
+                                                                                                                                                                                                                                                                                                                                                                    CS: Credits   Secured
+                                                                                                                                                                                                                                                                                                                                                                    AP: Already   Passed
+
+        Result  of  Programme  Code:   032      Programme   Name:                       BACHELOR     OF   TECHNOLOGY        (COMPUTER  SCIENCE   AND  ENGINEERING)        Sem./Year:   03  SEMESTER       Batch:   2016       Examination:   REAPPEAR   December,   2018
+
+S.No.    Photo.             Roll  no./Name                                                            Institution       Code:  164       Institution:   UNIVERSITY   SCHOOL   OF INFORMATION,    COMMUNICATION    & TECHNOLOGY   (FORMERLY   USIT)                                                                                                                           CS/Remarks
+                     04516403216                                            15205(4)                                                                                                                                                                                                                                                                                               4
+                     VINAY  KUMAR
+                     SID:  190000097707                  10    37
+                     SchemeID:   190322015001
+ 11                                                      47(C)
+                     04616403216                                            15203(4)      15205(4)       15209(4)                                                                                                                                                                                                                                                                  12
+                     VISHAL
+                     SID:  190000097708                  10    36                        10   30       13   37
+                     SchemeID:   190322015001
+ 12                                                      46(C)                          40(P)         50(B)
+                     41116403216                                            15205(4)      15209(4)       15211(4)                                                                                                                                                                                                                                                                  4
+                     ABHISHEK  VATS
+                     SID:  190000097722                  12    24                        13   44       15   15
+                     SchemeID:   190322015001
+ 13                                                      36(F)                          57(B+)        30(F)
+                     70416403216                                            15205(4)                                                                                                                                                                                                                                                                                               4
+                     NIKIT  BHANDARI
+                     SID:  190000098531                  12    31
+                     SchemeID:   190322015001
+ 14                                                      43(P)
+                     70916403216                                            15203(4)                                                                                                                                                                                                                                                                                               0
+                     SAMBA  COLLEY
+                     SID:  190000098536                  10    14
+                     SchemeID:   190322015001
+ 15                                                      24(F)
+
+ 16
+
+ 17
+
+ 18
+
+ 19
+
+ 20
+
+*Passed  with  Grace  Marks                                                                                                                                                                                                                                                            RTSID:  2019060703220161640023
+*SID:   Student  ID;              SchemeID:   The  scheme  applicable                       to     the  student.
+Date  on  which  pdf  made:  07/06/2019
+

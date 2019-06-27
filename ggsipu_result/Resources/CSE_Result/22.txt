@@ -1,0 +1,75 @@
+                                                                                                                                                                                                                                                                                                  RESULT   TABULATION                                                                  SHEET
+                                                                                                                                                                                                                                                                                          Result  Prepared                                                              on:   07/06/2019
+                                                                                                                                                                                                                                                                                          Result  Declared                                                              on:   07/06/2019
+                                                                                                                                                                                                                                                                                                                                                                        Page    No.:    0022
+                                                                                                                                                                                                                                                                                                                                                                    LEGEND
+
+                                                                                                                                                                                                                                                                                                                                                                           PAPERID(CREDITS)
+
+                                                                                                                                                                                                                                                                                                                                                                        Internal         External
+
+                                                                                                                                                                                                                                                                                                                                                                              TOTAL(GRADE)
+
+                                                                                                                                                                                                                                                                                                                                                                    A: Absent       C:  Cancelled
+                                                                                                                                                                                                                                                                                                                                                                    D: Detained     RL:  Result   Later
+                                                                                                                                                                                                                                                                                                                                                                    CS: Credits   Secured
+                                                                                                                                                                                                                                                                                                                                                                    AP: Already   Passed
+
+        Result  of  Programme  Code:   032      Programme   Name:                       BACHELOR     OF   TECHNOLOGY        (COMPUTER       SCIENCE  AND  ENGINEERING)        Sem./Year:   03  SEMESTER       Batch:   2016       Examination:   REAPPEAR   December,   2018
+
+S.No.    Photo.             Roll  no./Name                                                            Institution        Code:     164       Institution:   UNIVERSITY   SCHOOL   OF INFORMATION,    COMMUNICATION    & TECHNOLOGY   (FORMERLY   USIT)                                                                                                                       CS/Remarks
+                     00716403216                                            15205(4)      15207(4)       15209(4)       15211(4)                                                                                                                                                                                                                                                   0
+                     CHANDRIL  BHARDWAJ
+                     SID:  190000097729                  15    19                        16   11       13   18        16   17
+                     SchemeID:   190322015001
+ 1                                                       34(F)                          27(F)         31(F)          33(F)
+                     01216403216                                            15203(4)      15205(4)       15211(4)                                                                                                                                                                                                                                                                  8
+                     GOKUL  JOSHI
+                     SID:  190000097734                  10   A                          19   29       14   27
+                     SchemeID:   190322015001
+ 2                                                         A                            48(C)         41(P)
+                     01416403216                                            15203(4)      15209(4)                                                                                                                                                                                                                                                                                 8
+                     KAPIL  LAMBA
+                     SID:  190000097736                  10    55                        10   44
+                     SchemeID:   190322015001
+ 3                                                       65(A)                          54(B)
+                     01516403216                                            15203(4)                                                                                                                                                                                                                                                                                               4
+                     KESHAV  MISHRA
+                     SID:  190000097737                  15    45
+                     SchemeID:   190322015001
+ 4                                                      60(B+)
+                     01616403216                                            15203(4)      15205(4)       15251(1)                                                                                                                                                                                                                                                                  9
+                     KUMAR  NEELABH
+                     SID:  190000097738                  13    49                        18   26       15   45
+                     SchemeID:   190322015001
+ 5                                                      62(B+)                          44(P)         60(B+)
+                     02416403216                                            15203(4)      15209(4)       15211(4)                                                                                                                                                                                                                                                                  4
+                     NITESH  KUMAR  TYAGI
+                     SID:  190000097746                  10    37                        13   24       11   19
+                     SchemeID:   190322015001
+ 6                                                       47(C)                          37(F)         30(F)
+                     02616403216                                            15201(4)      15203(4)       15205(4)       15209(4)                                                                                                                                                                                                                                                   12
+                     PRASHANT
+                     SID:  190000097748                  11    26                        10   36       17   29        14   27
+                     SchemeID:   190322015001
+ 7                                                       37(F)                          46(C)         46(C)          41(P)
+                     03016403216                                            15203(4)      15205(4)       15209(4)                                                                                                                                                                                                                                                                  4
+                     PRINCE
+                     SID:  190000097692                  10    11                        7    26       8    42
+                     SchemeID:   190322015001
+ 8                                                       21(F)                          33(F)         50(B)
+                     03116403216                                            15203(4)                                                                                                                                                                                                                                                                                               4
+                     RAHUL  KANOJIA
+                     SID:  190000097693                  12    45
+                     SchemeID:   190322015001
+ 9                                                      57(B+)
+                     04416403216                                            15203(4)      15205(4)       15209(4)                                                                                                                                                                                                                                                                  12
+                     VIKAS
+                     SID:  190000097706                  10    31                        18   35       15   35
+                     SchemeID:   190322015001
+ 10                                                      41(P)                          53(B)         50(B)
+
+*Passed  with  Grace  Marks                                                                                                                                                                                                                                                                RTSID:  2019060703220161640022
+*SID:   Student  ID;              SchemeID:   The  scheme  applicable                       to     the  student.
+Date  on  which  pdf  made:  07/06/2019
+

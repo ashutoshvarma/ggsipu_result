@@ -11,8 +11,8 @@ TODO:
 """
 
 
-from objects import Student, Marks, Result, Subject
-from util import rm_extra_whitespace, group_iter
+from .objects import Student, Marks, Result, Subject
+from .util import rm_extra_whitespace, group_iter
 import re
 
 

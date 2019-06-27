@@ -11,7 +11,7 @@ TODO:
 """
 import os
 from subprocess import Popen
-from util import count_pdf_pages
+from .util import count_pdf_pages
 
 ROOT = os.path.abspath(os.path.dirname(__file__))
 BIN_ROOT = os.path.join(ROOT, 'bin')

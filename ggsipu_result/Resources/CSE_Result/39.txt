@@ -1,0 +1,35 @@
+                                                                                                                                                                                                                                                                                                                                                                         RESULT
+                                                                                                                                                                                                                                                                                                                                                  Prepared   Date:  07/06/2019
+                                                                                                                                                                                                                                                                                                                                                   Declared   Date:07/06/2019
+                                                                                                                                                                                                                                                                                                                                                               Page  No.:  0039
+
+                                                                                                                (SCHEME          OF        EXAMINATIONS)
+
+        Scheme  of  Programme   Code:  032       Programme   Name:  BACHELOR   OF TECHNOLOGY     (COMPUTER   SCIENCE   AND  ENGINEERING)         SchemeID:   190322015001        Sem./Year:   01  SEMESTER
+        Institution   Code:   164      Institution:    UNIVERSITY   SCHOOL  OF  INFORMATION,    COMMUNICATION    & TECHNOLOGY   (FORMERLY   USIT)
+S.No.  Paper  ID      Code                                                                              Subject                                                                            Credit        Type        Exam        Mode                                                                                     Kind            Minor        Major    Max.  Marks Pass   Marks
+
+  01     98101       HS101     COMMUNICATION    SKILLS  - I                                                                                                                                    3       THEORY         UES                                                                                 COMPULSORY        DROPPABLE        25           75          100          40
+
+  02     99103       BA103     CHEMISTRY   I                                                                                                                                                   3       THEORY         UES                                                                                 COMPULSORY        DROPPABLE        25           75          100          40
+
+  03     15105       IT105     INTRODUCTION   TO  COMPUTERS                                                                                                                                    3       THEORY         UES                                                                                 COMPULSORY        DROPPABLE        25           75          100          40
+
+  04     15107       IT107     ELECTRICAL   SCIENCE                                                                                                                                            4       THEORY         UES                                                                                 COMPULSORY        DROPPABLE        25           75          100          40
+
+  05     99109       BA109     MATHEMATICS   I                                                                                                                                                 4       THEORY         UES                                                                                 COMPULSORY        DROPPABLE        25           75          100          40
+
+  06     99111       BA111     PHYSICS  I                                                                                                                                                      3       THEORY         UES                                                                                 COMPULSORY        DROPPABLE        25           75          100          40
+
+  07     98119       HS119     IMPACT  OF  SCIENCE  &  TECHNOLOGY   ON  SOCIETY   - I                                                                                                          1      PRACTICAL      NUES                                                                                 COMPULSORY        DROPPABLE       --           100          100          40
+
+  08     99151       BA151     CHEMISTRY   I LAB                                                                                                                                               1      PRACTICAL       UES                                                                                 COMPULSORY        DROPPABLE        40           60          100          40
+
+  09     99153       BA153     PHYSICS  I  LAB                                                                                                                                                 1      PRACTICAL       UES                                                                                 COMPULSORY        DROPPABLE        40           60          100          40
+
+  10     15155       IT155     COMPUTER   LAB                                                                                                                                                  1      PRACTICAL       UES                                                                                 COMPULSORY        DROPPABLE        40           60          100          40
+
+  11     15157       IT157     ENGINEERING   GRAPHICS   I                                                                                                                                      1      PRACTICAL       UES                                                                                 COMPULSORY        DROPPABLE        40           60          100          40
+
+  12     15159       IT159     ELECTRICAL   SCIENCE   LAB                                                                                                                                      1      PRACTICAL       UES                                                                                 COMPULSORY        DROPPABLE        40           60          100          40
+
