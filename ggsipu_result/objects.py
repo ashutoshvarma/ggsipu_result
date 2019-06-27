@@ -51,12 +51,12 @@ class Marks(JSONSerializable):
 
 class Result(JSONSerializable):
 
-    def __init__(self, roll_num, semester, student_name=None, batch=None, marks={}):
+    def __init__(self, roll_num, semester, student_name=None, batch=None, marks=None):
         self.semester = semester
-        self.marks = marks
         self.roll_num = roll_num
         self.student_name = student_name
         self.batch = batch
+        self.marks = marks if marks else {}
 
     def get_mark_drops(self):
         # for paper_id, mark in self.marks.items():
