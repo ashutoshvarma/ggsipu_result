@@ -5,9 +5,6 @@ class JSONSerializable:
     def toJSON(self, indent=4):
         return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=indent)
 
-    def __repr__(self):
-        return self.toJSON()
-
 
 def toJSON(self, indent=4):
     """Convert to json, for custom classes it jsonize their attribute dict(__dict__)."""
