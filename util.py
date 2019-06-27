@@ -9,6 +9,11 @@ class JSONSerializable:
         return self.toJSON()
 
 
+def toJSON(self, indent=4):
+    """Convert to json, for custom classes it jsonize their attribute dict(__dict__)."""
+    return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=indent)
+
+
 def rm_extra_whitespace(string):
     """
     Remove Extra white space from 'string'.
