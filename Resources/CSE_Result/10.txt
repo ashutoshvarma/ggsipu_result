@@ -1,0 +1,37 @@
+                                                                                                                                                                                                                                                                                                                                                                         RESULT
+                                                                                                                                                                                                                                                                                                                                                  Prepared   Date:  07/06/2019
+                                                                                                                                                                                                                                                                                                                                                   Declared   Date:07/06/2019
+                                                                                                                                                                                                                                                                                                                                                               Page  No.:  0010
+
+                                                                                                               (SCHEME          OF         EXAMINATIONS)
+
+        Scheme  of  Programme   Code:  032       Programme   Name:  BACHELOR   OF TECHNOLOGY     (COMPUTER  SCIENCE   AND  ENGINEERING)         SchemeID:   190322015008         Sem./Year:   07 SEMESTER
+        Institution   Code:   164      Institution:    UNIVERSITY   SCHOOL  OF  INFORMATION,   COMMUNICATION    & TECHNOLOGY    (FORMERLY   USIT)
+S.No.  Paper  ID      Code                                                                             Subject                                                                            Credit        Type        Exam         Mode                                                                                     Kind            Minor        Major    Max.  Marks Pass   Marks
+
+  01     15401       IT401     ADVANCED   COMPUTER  NETWORKS                                                                                                                                  4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  02     15403       IT403     SOFTWARE   TESTING                                                                                                                                             4        THEORY        UES                                                                                  COMPULSORY        DROPPABLE        25           75          100          40
+
+  03     15405       IT405     DISTRIBUTED   SYSTEMS                                                                                                                                          4        THEORY        UES                                                                                    ELECTIVE        DROPPABLE        25           75          100          40
+
+  04     15407       IT407     ARTIFICIAL   INTELLIGENCE                                                                                                                                      4        THEORY        UES                                                                                    ELECTIVE        DROPPABLE        25           75          100          40
+
+  05     15409       IT409     SIMULATION   AND  MODELING                                                                                                                                     4        THEORY        UES                                                                                    ELECTIVE        DROPPABLE        25           75          100          40
+
+  06     15411       IT411     DIGITAL  IMAGE   PROCESSING                                                                                                                                    4        THEORY        UES                                                                                    ELECTIVE        DROPPABLE        25           75          100          40
+
+  07     15413       IT413     FRONT  END  DESIGN  TOOLS  AND  WEB  TECHNOLOGIES                                                                                                              4        THEORY        UES                                                                                    ELECTIVE        DROPPABLE        25           75          100          40
+
+  08     15415       IT415     ADVANCED   JAVA  PROGRAMMING                                                                                                                                   4        THEORY        UES                                                                                    ELECTIVE        DROPPABLE        25           75          100          40
+
+  09     15451       IT451     ACN  LAB.                                                                                                                                                      1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+
+  10     15455       IT455     LABORATORY   WORK  FOR  ELECTIVES                                                                                                                              1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+
+  11     15457       IT457     MINOR  PROJECT                                                                                                                                                 5      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+
+  12     15459       IT459     SUMMER  TRAINING   REPORT,   SEMINAR  AND  VIVA-VOCE                                                                                                           1      PRACTICAL      NUES                                                                                  COMPULSORY        DROPPABLE       --           100          100          40
+
+  13     15461       IT461     SOFTWARE   TESTING  LAB.                                                                                                                                       1      PRACTICAL       UES                                                                                  COMPULSORY        DROPPABLE        40           60          100          40
+

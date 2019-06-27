@@ -1,0 +1,69 @@
+                                                                                                                                                                                                                                                                                                                     RESULT  TABULATION                                                SHEET
+                                                                                                                                                                                                                                                                                                            Result   Prepared                                           on:   07/06/2019
+                                                                                                                                                                                                                                                                                                            Result   Declared                                           on:   07/06/2019
+                                                                                                                                                                                                                                                                                                                                                                        Page    No.:    0018
+                                                                                                                                                                                                                                                                                                                                                                    LEGEND
+
+                                                                                                                                                                                                                                                                                                                                                                           PAPERID(CREDITS)
+
+                                                                                                                                                                                                                                                                                                                                                                        Internal         External
+
+                                                                                                                                                                                                                                                                                                                                                                              TOTAL(GRADE)
+
+                                                                                                                                                                                                                                                                                                                                                                    A: Absent       C:  Cancelled
+                                                                                                                                                                                                                                                                                                                                                                    D: Detained     RL:  Result   Later
+                                                                                                                                                                                                                                                                                                                                                                    CS: Credits   Secured
+                                                                                                                                                                                                                                                                                                                                                                    AP: Already   Passed
+
+        Result  of  Programme  Code:   032      Programme   Name:                       BACHELOR     OF   TECHNOLOGY        (COMPUTER          SCIENCE  AND      ENGINEERING)                Sem./Year:       07 SEMESTER        Batch:  2015       Examination:    REGULAR  December,   2018
+
+S.No.    Photo.             Roll  no./Name                                                            Institution        Code:     164          Institution:        UNIVERSITY      SCHOOL      OF  INFORMATION,       COMMUNICATION    &  TECHNOLOGY   (FORMERLY   USIT)                                                                                                    CS/Remarks
+                     70116403215                                            15401(4)      15403(4)       15407(4)       15413(4)      15451(1)       15455(1)      15457(5)       15459(1)       15461(1)                                                                                                                                                                          25
+                     RAJIV  RANJAN  SAH
+                     SID:  190000091171                  21    50                        23   47       17   57        19   50        32   52       31   46        36   45      -     80        29   53
+                     SchemeID:   190322015001
+ 51                                                      71(A)                          70(A)         74(A)          69(A)          84(A+)        77(A+)         81(A+)        80(A+)         82(A+)
+                     70216403215                                            15401(4)      15403(4)       15407(4)       15413(4)      15451(1)       15455(1)      15457(5)       15459(1)       15461(1)                                                                                                                                                                          25
+                     VIKAS  KUMAR
+                     SID:  190000091172                  11    44                        19   57       20   44        19   40        30   48       26   34        30   48      -     79        30   51
+                     SchemeID:   190322015001
+ 52                                                     55(B+)                          76(A+)        64(B+)         59(B+)         78(A+)        60(B+)         78(A+)        79(A+)         81(A+)
+                     70316403215                                            15401(4)      15403(4)       15407(4)       15413(4)      15451(1)       15455(1)      15457(5)       15459(1)       15461(1)                                                                                                                                                                          25
+                     TENZIN  DAKAR
+                     SID:  190000091173                  19    31                        14   43       23   38        19   52        30   52       26   38        28   46      -     75        31   53
+                     SchemeID:   190322015001
+ 53                                                      50(B)                          57(B+)        61(B+)         71(A)          82(A+)        64(B+)         74(A)         75(A+)         84(A+)
+                     70416403215                                            15401(4)      15403(4)       15407(4)       15413(4)      15451(1)       15455(1)      15457(5)       15459(1)       15461(1)                                                                                                                                                                          25
+                     NGAWANG  DAKPA
+                     SID:  190000091174                  19    27                        11   49       18   40        16   43        29   45       28   46        32   44      -     75        30   48
+                     SchemeID:   190322015001
+ 54                                                      46(C)                          60(B+)        58(B+)         59(B+)         74(A)         74(A)          76(A+)        75(A+)         78(A+)
+                     70616403215                                            15401(4)      15403(4)       15407(4)       15413(4)      15451(1)       15455(1)      15457(5)       15459(1)       15461(1)                                                                                                                                                                          25
+                     THUPTEN  LEKSHEY
+                     SID:  190000091176                  11    39                        13   28       15   35        15   38        30   52       27   34        28   40      -     75        30   48
+                     SchemeID:   190322015001
+ 55                                                      50(B)                          41(P)         50(B)          53(B)          82(A+)        61(B+)         68(A)         75(A+)         78(A+)
+                     70716403215                                            15401(4)      15403(4)       15407(4)       15413(4)      15451(1)       15455(1)      15457(5)       15459(1)       15461(1)                                                                                                                                                                          25
+                     LYKA  KINRA
+                     SID:  190000091177                  17    37                        22   57       20   48        14   37        30   56       27   32        27   48      -     77        29   50
+                     SchemeID:   190322015001
+ 56                                                      54(B)                          79(A+)        68(A)          51(B)          86(A+)        59(B+)         75(A+)        77(A+)         79(A+)
+                     70816403215                                            15401(4)      15403(4)       15407(4)       15413(4)      15451(1)       15455(1)      15457(5)       15459(1)       15461(1)                                                                                                                                                                          25
+                     SWETA  KARNA
+                     SID:  190000091178                  16    46                        18   52       16   50        16   43        34   48       28   42        25   38      -     80        29   52
+                     SchemeID:   190322015001
+ 57                                                     62(B+)                          70(A)         66(A)          59(B+)         82(A+)        70(A)          63(B+)        80(A+)         81(A+)
+                     70916403215                                            15401(4)      15403(4)       15407(4)       15413(4)      15451(1)       15455(1)      15457(5)       15459(1)       15461(1)                                                                                                                                                                          25
+                     TASHI  TSERING
+                     SID:  190000091179                  21    32                        22   41       21   45        17   43        30   45       26   38        33   42      -     77        30   52
+                     SchemeID:   190322015001
+ 58                                                      53(B)                          63(B+)        66(A)          60(B+)         75(A+)        64(B+)         75(A+)        77(A+)         82(A+)
+
+ 59
+
+ 60
+
+*Passed  with  Grace  Marks                                                                                                                                                                                                                                                                                   RTSID:  2019060703220151640018
+*SID:   Student  ID;              SchemeID:   The  scheme  applicable                       to     the  student.
+Date  on  which  pdf  made:  07/06/2019
+
