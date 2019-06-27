@@ -62,7 +62,7 @@ class Result(JSONSerializable):
         # for paper_id, mark in self.marks.items():
         #     if mark.total < Subject.pass_marks():
         #         yeild mark
-        return [item[1] for item in self.marks.items() if item[1].total < Subject.pass_marks()]
+        return [item[1] for item in self.marks.items() if item[1].total and item[1].total < Subject.pass_marks()]
 
     def get_num_drops(self):
         return len(self.get_mark_drops())
