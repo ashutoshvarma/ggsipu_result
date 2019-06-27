@@ -144,7 +144,7 @@ def _iter_total_marks(data):
         # If first element is number then it is marks,
         # if not then it should be grade.
         marks = int(ex_data[0]) if ex_data[0].isdigit() else None
-        grade = ex_data[0] if not marks else (
+        grade = ex_data[0] if marks == None else (
             ex_data[1] if len(ex_data) > 1 else None)
         if marks or grade:
             yield marks, grade
