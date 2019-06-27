@@ -1,4 +1,12 @@
-import itertools
+import itertools, json
+
+
+class JSONSerializable:
+    def toJSON(self, indent=4):
+        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=indent)
+
+    def __repr__(self):
+        return self.toJSON()
 
 
 def rm_extra_whitespace(string):
