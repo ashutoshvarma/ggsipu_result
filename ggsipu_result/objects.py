@@ -70,10 +70,18 @@ class Result(JSONSerializable):
     def get_marks_by_paper(self, paper_id):
         return self.marks[paper_id]
 
-    def get_marks(self, min_marks=0, max_marks=Subject.max_marks()):
+    def get_marks(self, min_marks=0, max_marks=Subject.max_marks(), include_none=False):
         """Return the marks whose total is more than 'min_marks' and more than 'max_marks'
         """
-        return [item[1] for item in self.marks.items() if min_marks <= item[1].total <= max_marks]
+        marks = []
+        for k, m in self.marks.items():
+            if m.total:
+                if min_marks <= m.total <= max_marks:
+                    marks.append(m)
+            else:
+                if include_none and min_marks == 0:
+                    marks.append(m)
+        return marks
 
     def add_mark(self, paper_id, mark):
         if isinstance(paper_id, int):
