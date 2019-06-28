@@ -1,6 +1,6 @@
 
 # GGSIPU_result
-
+[![Build Status](https://travis-ci.org/ashutoshvarma/ggsipu_result.svg?branch=master)](https://travis-ci.org/ashutoshvarma/ggsipu_result)
   
 
 **ggsipu_result** is a A python module for extraction of results from GGSIPU results pdf. It is capable of:-

@@ -1,0 +1,18 @@
+language: python
+python: "3.6"
+sudo: false
+
+env:
+  - TOX_ENV=py33
+  - TOX_ENV=py34
+  - TOX_ENV=py35
+
+install:
+  - pip install tox --use-mirrors
+
+script:
+  - tox -e $TOX_ENV
+
+matrix:
+  fast_finish: true
+
