@@ -59,10 +59,8 @@ class Result(JSONSerializable):
         self.marks = marks if marks else {}
 
     def get_mark_drops(self):
-        # for paper_id, mark in self.marks.items():
-        #     if mark.total < Subject.pass_marks():
-        #         yeild mark
-        return [item[1] for item in self.marks.items() if item[1].total and item[1].total < Subject.pass_marks()]
+        """Return marks where total in less than passing marks or None"""
+        return self.get_marks(0, 39, True)
 
     def get_num_drops(self):
         return len(self.get_mark_drops())
@@ -71,7 +69,15 @@ class Result(JSONSerializable):
         return self.marks[paper_id]
 
     def get_marks(self, min_marks=0, max_marks=Subject.max_marks(), include_none=False):
-        """Return the marks whose total is more than 'min_marks' and more than 'max_marks'
+        """ Return the marks whose total is more than eq 'min_marks' and more than eq 'max_marks'
+
+            Args:
+                min_marks: minimum marks
+                max_marks: maximum marks
+                include_none: Whether to include marks where total in None or not.
+
+            Returns:
+                List of filtered Marks objects.
         """
         marks = []
         for k, m in self.marks.items():
