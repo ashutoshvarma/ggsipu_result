@@ -8,7 +8,7 @@ env:
   - TOX_ENV=py35
 
 install:
-  - pip install tox --use-mirrors
+  - pip install tox 
 
 script:
   - tox -e $TOX_ENV
