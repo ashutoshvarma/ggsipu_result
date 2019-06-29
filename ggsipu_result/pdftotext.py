@@ -51,8 +51,7 @@ def _invoke_bin(args, executable, timeout=None, verbose=False):
 
 def _invoke_pdftotext(args, timeout=None, verbose=False):
     if OS == 'Linux':
-        _invoke_bin(["chmod", "755", PDFTOTXT_BIN], '/bin/sh')
-        
+        os.chmod(PDFTOTXT_BIN, 0o775)
         
     return _invoke_bin(args, PDFTOTXT_BIN, timeout, verbose)
 
