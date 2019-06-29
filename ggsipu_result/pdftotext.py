@@ -10,14 +10,28 @@ TODO:
     * implement bin_version func
 """
 import os
+import platform
 from subprocess import Popen
 from .util import count_pdf_pages
+
+OS = platform.system()
 
 ROOT = os.path.abspath(os.path.dirname(__file__))
 BIN_ROOT = os.path.join(ROOT, 'bin')
 
-PDFTOTXT_BIN = os.path.join(BIN_ROOT, 'pdftotext.exe')
+PDFTOTXT = os.path.join(BIN_ROOT, 'pdftotext_')
 TEMP_FILE = '.temp'
+
+
+def is_x64():
+    return platform.machine().endswith('64')
+
+if OS == 'Windows':
+    PDFTOTXT_BIN = PDFTOTXT + '64.exe' if is_x64() else '32.exe'
+elif OS == 'Linux':
+    PDFTOTXT_BIN = PDFTOTXT + '64.run' if is_x64() else '32.run'
+else:
+    raise OSError("{} is Not Supported.".format(OS))
 
 
 def _invoke_bin(args, executable, timeout=None, verbose=False):
@@ -36,6 +50,10 @@ def _invoke_bin(args, executable, timeout=None, verbose=False):
 
 
 def _invoke_pdftotext(args, timeout=None, verbose=False):
+    if OS == 'Linux':
+        _invoke_bin(["chmod", "755", PDFTOTXT_BIN], '/bin/sh')
+        
+        
     return _invoke_bin(args, PDFTOTXT_BIN, timeout, verbose)
 
 
