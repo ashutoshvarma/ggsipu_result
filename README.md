@@ -12,7 +12,7 @@
 
 
 ## Examples
-
+Given code prints top 5 students of 2018 batch:-
 ```
 from ggsipu_result import iter_pages, has_page_results, iter_results
 
