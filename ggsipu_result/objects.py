@@ -96,8 +96,22 @@ class Result(JSONSerializable):
         else:
             raise TypeError("paper_id should be of int type")
 
+    def get_cgpa(self):
+        grades = {'O': 10, 'A+': 9, 'A': 8, 'B+': 7, 'B': 6, 'C': 5, 'P': 4}
+        total_credit = sum(
+            m.paper_credit if m.paper_credit else 0 for m in self.get_marks())
+        total = sum(grades.get(
+            m.grade, 0) * m.paper_credit if m.total and m.paper_credit else 0 for m in self.get_marks())
+        return round(total/total_credit, 2) if total and total_credit else 0
+
+    cgpa = property(lambda self: self.get_cgpa(), None, None)
+    """
+    Read-only property that accesses the
+    get_cgpa()<Result.get_cgpa()> function.
+    """
+
     def __str__(self):
-        return "Result: [{self.roll_num}]{self.student_name}({self.batch}) Semester: {self.semester}".format(self=self)
+        return "Result(Sem {self.semester})[{self.roll_num}]{self.student_name}({self.batch}) [CGPA: {self.cgpa}]".format(self=self)
 
 
 class Student(JSONSerializable):
