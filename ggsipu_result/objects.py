@@ -59,9 +59,17 @@ class Result(JSONSerializable):
         self.batch = batch
         self.marks = marks if marks else {}
 
-    def get_mark_drops(self):
-        """Return marks where total in less than passing marks or None"""
-        return self.get_marks(0, 39, True)
+    def get_mark_drops(self, ignore_None=False):
+        """ 
+        Return marks where total in less than passing marks or None
+        
+        Args:
+            include_none: Whether to include marks where total in None or not.
+
+        Returns:
+            List of failed Marks objects.
+        """
+        return self.get_marks(0, 39, ignore_None)
 
     def get_num_drops(self):
         """Get the num total failed."""
