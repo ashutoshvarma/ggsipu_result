@@ -14,21 +14,26 @@
 ## Examples
 
 ```
-import ggsipu_result
+from ggsipu_result import iter_pages, has_page_results, iter_results
 
-# If first page have subjects details
-page_txt = ggsipu_result.get_page(FILE, 1)
+results = []
+for page in iter_pages(FILE):
+    if has_page_results(page):
+        results = results + [r for r in iter_results(page) if r.batch == 2018]
+        
+results.sort(key=lambda x: x.cgpa, reverse=True)
 
-for subject in ggsipu_result.iter_subjects(page_txt):
-	print(subject)
+for i, result in enumerate(results[:5]):
+    print("{i}. {r}".format(i=i+1, r= result))
 
   
 
 ## PROBABLE OUTPUT
-# >> 98101-COMMUNICATION SKILLS - I[HS101]
-# >> 99103-CHEMISTRY I[BA103]
-# >> 15105-INTRODUCTION TO COMPUTERS[IT105]
-# >> 15107-ELECTRICAL SCIENCE[IT107]
+1. Result(Sem 1): [41516403218]GAURAV JAIN(2018) [CGPA: 8.92]
+2. Result(Sem 1): [41016403218]VARDAAN GROVER(2018) [CGPA: 8.77]
+3. Result(Sem 1): [40316403218]UJJWAL NEGI(2018) [CGPA: 8.73]
+4. Result(Sem 1): [40116403218]RIGVED ALANKAR(2018) [CGPA: 8.5]
+5. Result(Sem 1): [01616403218]CHAITANYA GIRI(2018) [CGPA: 8.46]
 ```
 For more examples please see `Sample_Code` folder
 
