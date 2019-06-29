@@ -26,7 +26,6 @@ class data_process_TestCases(unittest.TestCase):
         # To incorporate large asserEquals calls
         self.maxDiff = None
 
-
     def test_has_page_subjects(self):
         # Load data file
         with open(self.subject_data_file, 'r') as inputfile:
@@ -48,3 +47,12 @@ class data_process_TestCases(unittest.TestCase):
             results = list(ggsipu_result.iter_results(inputfile.read()))
             json_dump = ggsipu_result.toJSON(results)
             self.assertEqual(json_dump, dumpf.read())
+
+
+class pdftotext_TestCases(unittest.TestCase):
+
+    def test_iter_pages(self):
+        pdf_file = os.path.join(RESOURCE_ROOT, 'CSE_Result.pdf')
+        for i, page in enumerate(ggsipu_result.iter_pages(pdf_file)):
+            with open(os.path.join(RESOURCE_ROOT, 'CSE_Result', str(i+1) + '.txt'), 'r') as txtf:
+                self.assertEqual(txtf.read(), page)
