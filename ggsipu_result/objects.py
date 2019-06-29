@@ -64,8 +64,15 @@ class Result(JSONSerializable):
         return self.get_marks(0, 39, True)
 
     def get_num_drops(self):
+        """Get the num total failed."""
         return len(self.get_mark_drops())
 
+    num_drops = property(lambda self: self.get_num_drops(), None, None)
+    """
+    Read-only property that accesses the
+    get_num_drops()<Result.get_num_drops()> function.
+    """
+    
     def get_marks_by_paper(self, paper_id):
         return self.marks[paper_id]
 
@@ -97,6 +104,8 @@ class Result(JSONSerializable):
             raise TypeError("paper_id should be of int type")
 
     def get_cgpa(self):
+        """Get the CGPA for tha marks"""
+
         grades = {'O': 10, 'A+': 9, 'A': 8, 'B+': 7, 'B': 6, 'C': 5, 'P': 4}
         total_credit = sum(
             m.paper_credit if m.paper_credit else 0 for m in self.get_marks())
