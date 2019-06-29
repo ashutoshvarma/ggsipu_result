@@ -120,7 +120,7 @@ class Result(JSONSerializable):
     """
 
     def __str__(self):
-        return "Result(Sem {self.semester})[{self.roll_num}]{self.student_name}({self.batch}) [CGPA: {self.cgpa}]".format(self=self)
+        return "Result(Sem {self.semester}): [{self.roll_num}]{self.student_name}({self.batch}) [CGPA: {self.cgpa}]".format(self=self)
 
 
 class Student(JSONSerializable):
