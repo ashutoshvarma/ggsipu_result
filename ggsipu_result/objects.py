@@ -38,15 +38,16 @@ class Subject(JSONSerializable):
 
 
 class Marks(JSONSerializable):
-    def __init__(self, paper_id, minor, major, total, grade=None):
+    def __init__(self, paper_id, minor, major, total, grade=None, paper_credit=None):
         self.paper_id = paper_id
         self.minor = minor
         self.major = major
         self.total = total
         self.grade = grade
+        self.paper_credit = paper_credit
 
     def __str__(self):
-        return "[{self.paper_id}] Minor-{self.minor}, Major-{self.major}, Total-{self.total}".format(self=self)
+        return "[{self.paper_id}]({self.paper_credit}) Minor-{self.minor}, Major-{self.major}, Total-{self.total}".format(self=self)
 
 
 class Result(JSONSerializable):

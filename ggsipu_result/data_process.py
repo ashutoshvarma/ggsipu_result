@@ -73,27 +73,28 @@ def _get_batch(data):
     return int(match.group(1)) if match else None
 
 
-def _iter_paper_ids(data):
+def _iter_paper_id_credits(data):
     """
     Iterate the paper ids in given data
 
-    Match 5 digit number followed by '(' from begininig
-    of each words in given 'data' as paper ids are followed
-    by their credit number.
+    Match 5 digit number followed by '(' with atleast one digit
+    and completed by ')' from begininig of each words in given 
+    'data' as paper ids are followed by their credit number.
     Example:- 98768(3) 98767(2)
 
     Args:
         data: Single line of string having paper ids.
 
     Return:
-        Generator object of int
+        Generator object of (paper_id, paper_credit)
     """
-    RE_PAPER_ID = re.compile(r'^\d{5}(?=\()')
+    RE_PAPER_ID = re.compile(r'^(?P<paper_id>\d{5})\((?P<paper_credit>\d+)\)')
     for word in data.split():
         match = RE_PAPER_ID.search(word)
-        paper_id = match.group() if match else None
+        paper_id = match.group('paper_id') if match else None
+        paper_credit = match.group('paper_credit') if match else None
         if paper_id:
-            yield int(paper_id)
+            yield int(paper_id), int(paper_credit)
 
 
 def _iter_marks(data):
@@ -308,7 +309,7 @@ def iter_results(raw_data, force=False):
         roll_match = RE_ROLL_NUM.search(line)
         if roll_match:
             # list with subject_ids
-            paper_ids = list(_iter_paper_ids(line))
+            paper_id_credits = list(_iter_paper_id_credits(line))
             # list of (minor, major) marks
             raw_marks = list(_iter_marks(raw_data[i + GAP_MARKS]))
             # list of (total, grade)
@@ -321,12 +322,12 @@ def iter_results(raw_data, force=False):
             del raw_data[i: GAP_TOTAL_MARKS]
 
             new_result = Result(roll_match.group(), semester, name, batch)
-            for paper_id, mark, total_grade in zip(paper_ids, raw_marks, total_and_grades):
+            for paper_id_credit, mark, total_grade in zip(paper_id_credits, raw_marks, total_and_grades):
 
                 minor = int(mark[0]) if mark[0].isdigit() else None
                 major = int(mark[1]) if mark[1].isdigit() else None
 
                 temp_mark = Marks(
-                    paper_id, minor, major, total_grade[0], total_grade[1])
-                new_result.add_mark(paper_id, temp_mark)
+                    paper_id_credit[0], minor, major, total_grade[0], total_grade[1], paper_id_credit[1])
+                new_result.add_mark(paper_id_credit[0], temp_mark)
             yield new_result
