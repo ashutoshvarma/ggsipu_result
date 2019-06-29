@@ -6,6 +6,7 @@
                 "grade": "B+",
                 "major": 48,
                 "minor": 16,
+                "paper_credit": 3,
                 "paper_id": 15105,
                 "total": 64
             },
@@ -13,6 +14,7 @@
                 "grade": "B",
                 "major": 39,
                 "minor": 13,
+                "paper_credit": 4,
                 "paper_id": 15107,
                 "total": 52
             },
@@ -20,6 +22,7 @@
                 "grade": "A+",
                 "major": 49,
                 "minor": 32,
+                "paper_credit": 1,
                 "paper_id": 15155,
                 "total": 81
             },
@@ -27,6 +30,7 @@
                 "grade": "P",
                 "major": 25,
                 "minor": 17,
+                "paper_credit": 1,
                 "paper_id": 15157,
                 "total": 42
             },
@@ -34,6 +38,7 @@
                 "grade": "A+",
                 "major": 53,
                 "minor": 26,
+                "paper_credit": 1,
                 "paper_id": 15159,
                 "total": 79
             },
@@ -41,6 +46,7 @@
                 "grade": "A",
                 "major": 53,
                 "minor": 17,
+                "paper_credit": 3,
                 "paper_id": 98101,
                 "total": 70
             },
@@ -48,6 +54,7 @@
                 "grade": "A",
                 "major": 65,
                 "minor": null,
+                "paper_credit": 1,
                 "paper_id": 98119,
                 "total": 65
             },
@@ -55,6 +62,7 @@
                 "grade": "B+",
                 "major": 46,
                 "minor": 15,
+                "paper_credit": 3,
                 "paper_id": 99103,
                 "total": 61
             },
@@ -62,6 +70,7 @@
                 "grade": "F",
                 "major": 5,
                 "minor": 6,
+                "paper_credit": 4,
                 "paper_id": 99109,
                 "total": 11
             },
@@ -69,6 +78,7 @@
                 "grade": "B+",
                 "major": 45,
                 "minor": 15,
+                "paper_credit": 3,
                 "paper_id": 99111,
                 "total": 60
             },
@@ -76,6 +86,7 @@
                 "grade": "A",
                 "major": 45,
                 "minor": 28,
+                "paper_credit": 1,
                 "paper_id": 99151,
                 "total": 73
             },
@@ -83,6 +94,7 @@
                 "grade": "A+",
                 "major": 42,
                 "minor": 36,
+                "paper_credit": 1,
                 "paper_id": 99153,
                 "total": 78
             }
@@ -98,6 +110,7 @@
                 "grade": "A",
                 "major": 46,
                 "minor": 23,
+                "paper_credit": 3,
                 "paper_id": 15105,
                 "total": 69
             },
@@ -105,6 +118,7 @@
                 "grade": "F",
                 "major": 22,
                 "minor": 9,
+                "paper_credit": 4,
                 "paper_id": 15107,
                 "total": 31
             },
@@ -112,6 +126,7 @@
                 "grade": "A+",
                 "major": 47,
                 "minor": 31,
+                "paper_credit": 1,
                 "paper_id": 15155,
                 "total": 78
             },
@@ -119,6 +134,7 @@
                 "grade": "F",
                 "major": 20,
                 "minor": 12,
+                "paper_credit": 1,
                 "paper_id": 15157,
                 "total": 32
             },
@@ -126,6 +142,7 @@
                 "grade": "A+",
                 "major": 51,
                 "minor": 29,
+                "paper_credit": 1,
                 "paper_id": 15159,
                 "total": 80
             },
@@ -133,6 +150,7 @@
                 "grade": "A",
                 "major": 45,
                 "minor": 21,
+                "paper_credit": 3,
                 "paper_id": 98101,
                 "total": 66
             },
@@ -140,6 +158,7 @@
                 "grade": "B+",
                 "major": 62,
                 "minor": null,
+                "paper_credit": 1,
                 "paper_id": 98119,
                 "total": 62
             },
@@ -147,6 +166,7 @@
                 "grade": "B",
                 "major": 37,
                 "minor": 15,
+                "paper_credit": 3,
                 "paper_id": 99103,
                 "total": 52
             },
@@ -154,6 +174,7 @@
                 "grade": "F",
                 "major": 6,
                 "minor": 7,
+                "paper_credit": 4,
                 "paper_id": 99109,
                 "total": 13
             },
@@ -161,6 +182,7 @@
                 "grade": "P",
                 "major": 29,
                 "minor": 12,
+                "paper_credit": 3,
                 "paper_id": 99111,
                 "total": 41
             },
@@ -168,6 +190,7 @@
                 "grade": "A",
                 "major": 44,
                 "minor": 27,
+                "paper_credit": 1,
                 "paper_id": 99151,
                 "total": 71
             },
@@ -175,6 +198,7 @@
                 "grade": "A",
                 "major": 39,
                 "minor": 31,
+                "paper_credit": 1,
                 "paper_id": 99153,
                 "total": 70
             }
@@ -190,6 +214,7 @@
                 "grade": "B",
                 "major": 38,
                 "minor": 16,
+                "paper_credit": 3,
                 "paper_id": 15105,
                 "total": 54
             },
@@ -197,6 +222,7 @@
                 "grade": "P",
                 "major": 31,
                 "minor": 11,
+                "paper_credit": 4,
                 "paper_id": 15107,
                 "total": 42
             },
@@ -204,6 +230,7 @@
                 "grade": "A+",
                 "major": 48,
                 "minor": 34,
+                "paper_credit": 1,
                 "paper_id": 15155,
                 "total": 82
             },
@@ -211,6 +238,7 @@
                 "grade": "P",
                 "major": 21,
                 "minor": 13,
+                "paper_credit": 1,
                 "paper_id": 15157,
                 "total": 40
             },
@@ -218,6 +246,7 @@
                 "grade": "A+",
                 "major": 53,
                 "minor": 30,
+                "paper_credit": 1,
                 "paper_id": 15159,
                 "total": 83
             },
@@ -225,6 +254,7 @@
                 "grade": "A",
                 "major": 52,
                 "minor": 22,
+                "paper_credit": 3,
                 "paper_id": 98101,
                 "total": 74
             },
@@ -232,6 +262,7 @@
                 "grade": "B+",
                 "major": 62,
                 "minor": null,
+                "paper_credit": 1,
                 "paper_id": 98119,
                 "total": 62
             },
@@ -239,6 +270,7 @@
                 "grade": "C",
                 "major": 29,
                 "minor": 16,
+                "paper_credit": 3,
                 "paper_id": 99103,
                 "total": 45
             },
@@ -246,6 +278,7 @@
                 "grade": "F",
                 "major": 22,
                 "minor": 11,
+                "paper_credit": 4,
                 "paper_id": 99109,
                 "total": 33
             },
@@ -253,6 +286,7 @@
                 "grade": "B",
                 "major": 38,
                 "minor": 16,
+                "paper_credit": 3,
                 "paper_id": 99111,
                 "total": 54
             },
@@ -260,6 +294,7 @@
                 "grade": "A",
                 "major": 44,
                 "minor": 28,
+                "paper_credit": 1,
                 "paper_id": 99151,
                 "total": 72
             },
@@ -267,6 +302,7 @@
                 "grade": "A+",
                 "major": 46,
                 "minor": 38,
+                "paper_credit": 1,
                 "paper_id": 99153,
                 "total": 84
             }
@@ -282,6 +318,7 @@
                 "grade": "B+",
                 "major": 41,
                 "minor": 16,
+                "paper_credit": 3,
                 "paper_id": 15105,
                 "total": 57
             },
@@ -289,6 +326,7 @@
                 "grade": "A",
                 "major": 51,
                 "minor": 14,
+                "paper_credit": 4,
                 "paper_id": 15107,
                 "total": 65
             },
@@ -296,6 +334,7 @@
                 "grade": "A+",
                 "major": 49,
                 "minor": 34,
+                "paper_credit": 1,
                 "paper_id": 15155,
                 "total": 83
             },
@@ -303,6 +342,7 @@
                 "grade": "B+",
                 "major": 33,
                 "minor": 22,
+                "paper_credit": 1,
                 "paper_id": 15157,
                 "total": 55
             },
@@ -310,6 +350,7 @@
                 "grade": "A+",
                 "major": 53,
                 "minor": 27,
+                "paper_credit": 1,
                 "paper_id": 15159,
                 "total": 80
             },
@@ -317,6 +358,7 @@
                 "grade": "A+",
                 "major": 56,
                 "minor": 22,
+                "paper_credit": 3,
                 "paper_id": 98101,
                 "total": 78
             },
@@ -324,6 +366,7 @@
                 "grade": "B+",
                 "major": 63,
                 "minor": null,
+                "paper_credit": 1,
                 "paper_id": 98119,
                 "total": 63
             },
@@ -331,6 +374,7 @@
                 "grade": "B+",
                 "major": 43,
                 "minor": 16,
+                "paper_credit": 3,
                 "paper_id": 99103,
                 "total": 59
             },
@@ -338,6 +382,7 @@
                 "grade": "B",
                 "major": 43,
                 "minor": 7,
+                "paper_credit": 4,
                 "paper_id": 99109,
                 "total": 50
             },
@@ -345,6 +390,7 @@
                 "grade": "C",
                 "major": 30,
                 "minor": 15,
+                "paper_credit": 3,
                 "paper_id": 99111,
                 "total": 45
             },
@@ -352,6 +398,7 @@
                 "grade": "A",
                 "major": 44,
                 "minor": 27,
+                "paper_credit": 1,
                 "paper_id": 99151,
                 "total": 71
             },
@@ -359,6 +406,7 @@
                 "grade": "A",
                 "major": 41,
                 "minor": 25,
+                "paper_credit": 1,
                 "paper_id": 99153,
                 "total": 66
             }
@@ -374,6 +422,7 @@
                 "grade": "B+",
                 "major": 50,
                 "minor": 14,
+                "paper_credit": 3,
                 "paper_id": 15105,
                 "total": 64
             },
@@ -381,6 +430,7 @@
                 "grade": "F",
                 "major": 19,
                 "minor": 10,
+                "paper_credit": 4,
                 "paper_id": 15107,
                 "total": 29
             },
@@ -388,6 +438,7 @@
                 "grade": "A+",
                 "major": 48,
                 "minor": 33,
+                "paper_credit": 1,
                 "paper_id": 15155,
                 "total": 81
             },
@@ -395,6 +446,7 @@
                 "grade": "B",
                 "major": 30,
                 "minor": 20,
+                "paper_credit": 1,
                 "paper_id": 15157,
                 "total": 50
             },
@@ -402,6 +454,7 @@
                 "grade": "A+",
                 "major": 51,
                 "minor": 25,
+                "paper_credit": 1,
                 "paper_id": 15159,
                 "total": 76
             },
@@ -409,6 +462,7 @@
                 "grade": "A",
                 "major": 48,
                 "minor": 19,
+                "paper_credit": 3,
                 "paper_id": 98101,
                 "total": 67
             },
@@ -416,6 +470,7 @@
                 "grade": "F",
                 "major": 0,
                 "minor": null,
+                "paper_credit": 1,
                 "paper_id": 98119,
                 "total": 0
             },
@@ -423,6 +478,7 @@
                 "grade": "C",
                 "major": 32,
                 "minor": 14,
+                "paper_credit": 3,
                 "paper_id": 99103,
                 "total": 46
             },
@@ -430,6 +486,7 @@
                 "grade": "F",
                 "major": 2,
                 "minor": 5,
+                "paper_credit": 4,
                 "paper_id": 99109,
                 "total": 7
             },
@@ -437,6 +494,7 @@
                 "grade": "P",
                 "major": 21,
                 "minor": 13,
+                "paper_credit": 3,
                 "paper_id": 99111,
                 "total": 40
             },
@@ -444,6 +502,7 @@
                 "grade": "A",
                 "major": 45,
                 "minor": 27,
+                "paper_credit": 1,
                 "paper_id": 99151,
                 "total": 72
             },
@@ -451,6 +510,7 @@
                 "grade": "A+",
                 "major": 42,
                 "minor": 39,
+                "paper_credit": 1,
                 "paper_id": 99153,
                 "total": 81
             }
@@ -466,6 +526,7 @@
                 "grade": "B+",
                 "major": 34,
                 "minor": 21,
+                "paper_credit": 3,
                 "paper_id": 15105,
                 "total": 55
             },
@@ -473,6 +534,7 @@
                 "grade": "B",
                 "major": 36,
                 "minor": 14,
+                "paper_credit": 4,
                 "paper_id": 15107,
                 "total": 50
             },
@@ -480,6 +542,7 @@
                 "grade": "A+",
                 "major": 45,
                 "minor": 30,
+                "paper_credit": 1,
                 "paper_id": 15155,
                 "total": 75
             },
@@ -487,6 +550,7 @@
                 "grade": "P",
                 "major": 28,
                 "minor": 16,
+                "paper_credit": 1,
                 "paper_id": 15157,
                 "total": 44
             },
@@ -494,6 +558,7 @@
                 "grade": "A+",
                 "major": 51,
                 "minor": 29,
+                "paper_credit": 1,
                 "paper_id": 15159,
                 "total": 80
             },
@@ -501,6 +566,7 @@
                 "grade": "B+",
                 "major": 40,
                 "minor": 20,
+                "paper_credit": 3,
                 "paper_id": 98101,
                 "total": 60
             },
@@ -508,6 +574,7 @@
                 "grade": "B+",
                 "major": 61,
                 "minor": null,
+                "paper_credit": 1,
                 "paper_id": 98119,
                 "total": 61
             },
@@ -515,6 +582,7 @@
                 "grade": "B",
                 "major": 38,
                 "minor": 16,
+                "paper_credit": 3,
                 "paper_id": 99103,
                 "total": 54
             },
@@ -522,6 +590,7 @@
                 "grade": "F",
                 "major": 18,
                 "minor": 11,
+                "paper_credit": 4,
                 "paper_id": 99109,
                 "total": 29
             },
@@ -529,6 +598,7 @@
                 "grade": "B+",
                 "major": 44,
                 "minor": 13,
+                "paper_credit": 3,
                 "paper_id": 99111,
                 "total": 57
             },
@@ -536,6 +606,7 @@
                 "grade": "A+",
                 "major": 46,
                 "minor": 29,
+                "paper_credit": 1,
                 "paper_id": 99151,
                 "total": 75
             },
@@ -543,6 +614,7 @@
                 "grade": "A",
                 "major": 39,
                 "minor": 35,
+                "paper_credit": 1,
                 "paper_id": 99153,
                 "total": 74
             }
@@ -558,6 +630,7 @@
                 "grade": "F",
                 "major": 23,
                 "minor": 8,
+                "paper_credit": 3,
                 "paper_id": 15105,
                 "total": 31
             },
@@ -565,6 +638,7 @@
                 "grade": "P",
                 "major": 30,
                 "minor": 9,
+                "paper_credit": 4,
                 "paper_id": 15107,
                 "total": 40
             },
@@ -572,6 +646,7 @@
                 "grade": "A+",
                 "major": 49,
                 "minor": 34,
+                "paper_credit": 1,
                 "paper_id": 15155,
                 "total": 83
             },
@@ -579,6 +654,7 @@
                 "grade": "B+",
                 "major": 34,
                 "minor": 21,
+                "paper_credit": 1,
                 "paper_id": 15157,
                 "total": 55
             },
@@ -586,6 +662,7 @@
                 "grade": "A+",
                 "major": 53,
                 "minor": 28,
+                "paper_credit": 1,
                 "paper_id": 15159,
                 "total": 81
             },
@@ -593,6 +670,7 @@
                 "grade": "A+",
                 "major": 60,
                 "minor": 22,
+                "paper_credit": 3,
                 "paper_id": 98101,
                 "total": 82
             },
@@ -600,6 +678,7 @@
                 "grade": "B+",
                 "major": 63,
                 "minor": null,
+                "paper_credit": 1,
                 "paper_id": 98119,
                 "total": 63
             },
@@ -607,6 +686,7 @@
                 "grade": "B+",
                 "major": 40,
                 "minor": 15,
+                "paper_credit": 3,
                 "paper_id": 99103,
                 "total": 55
             },
@@ -614,6 +694,7 @@
                 "grade": "F",
                 "major": 6,
                 "minor": 5,
+                "paper_credit": 4,
                 "paper_id": 99109,
                 "total": 11
             },
@@ -621,6 +702,7 @@
                 "grade": "B",
                 "major": 37,
                 "minor": 14,
+                "paper_credit": 3,
                 "paper_id": 99111,
                 "total": 51
             },
@@ -628,6 +710,7 @@
                 "grade": "A",
                 "major": 44,
                 "minor": 27,
+                "paper_credit": 1,
                 "paper_id": 99151,
                 "total": 71
             },
@@ -635,6 +718,7 @@
                 "grade": "B+",
                 "major": 34,
                 "minor": 30,
+                "paper_credit": 1,
                 "paper_id": 99153,
                 "total": 64
             }
