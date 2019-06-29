@@ -27,7 +27,7 @@ def _invoke_bin(args, executable, timeout=None, verbose=False):
     if verbose:
         print("Executing {} {}".format(executable, " ".join(args)))
 
-    with Popen(args, executable=PDFTOTXT_BIN) as proc:
+    with Popen(args, executable=executable) as proc:
         try:
             return proc.wait(timeout=timeout)
         except:
