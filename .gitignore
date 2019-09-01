@@ -9,4 +9,4 @@ venv
 
 
 *.temp
-test.py
+test*.py
