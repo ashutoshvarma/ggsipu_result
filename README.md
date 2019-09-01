@@ -1,3 +1,5 @@
+# Repo Moved to [ggsipu_results_tracker](https://github.com/GGSIPUResultTracker/ggsipu_results_extractor/)
+Please refer to new repo for future updates
 
 # GGSIPU_result
 [![Build Status](https://travis-ci.org/ashutoshvarma/ggsipu_result.svg?branch=master)](https://travis-ci.org/ashutoshvarma/ggsipu_result)
