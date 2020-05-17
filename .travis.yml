@@ -1,21 +1,21 @@
+# After changing this file, check it on:
+#   http://lint.travis-ci.org/
 language: python
-python: "3.6"
-sudo: false
+os: linux
+dist: xenial
 
-env:
-  - TOX_ENV=py35
-  - TOX_ENV=py36
+jobs:
+  include:
+    - python: 3.8
+    - python: 3.7
+    - python: 3.6
+    - python: 3.5
 
+before_install:
+  - pip install -U pip setuptools wheel
 install:
-  - pip install tox 
+  - pip install -r requirements.txt 
 
 script:
-  - tox -e $TOX_ENV
-
-matrix:
-  # Python 3.5 not yet available on travis, watch this to see when it is.
-  fast_finish: true
-  allow_failures:
-    - env: TOX_ENV=py35
-
+  - python -m unittest Tests.tests
 
