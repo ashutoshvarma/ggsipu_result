@@ -12,18 +12,18 @@
 from setuptools import setup
 from os import path
 
-import ggsipu_result as package
-
+# bump ggsipu_result/__init__.py version as well.
+VERSION = 0.1
 
 with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding="utf8") as f:
     readme = f.read()
 
 setup(
     name='ggsipu_result',
-    version=package.__version__,
+    version=VERSION,
     packages=['ggsipu_result'],
     install_requires=[
-        'pyxpdf ; python_version == "0.1.1"',
+        'pyxpdf==0.1.1',
     ],
     description='GGSIPU Results PDF parser and analyzer',
     long_description=readme,
@@ -47,7 +47,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3 :: Only',
         'Development Status :: 5 - Production/Stable',
-        'Environment :: Console',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Topic :: Text Processing',
     ],
