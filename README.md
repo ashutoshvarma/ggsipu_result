@@ -36,6 +36,10 @@ for i, result in enumerate(results[:5]):
 ```
 For more examples please see `Sample_Code` folder
 
+## Install
+```
+pip install ggsipu-result
+```
 
 ## Tests
 
