@@ -4,7 +4,6 @@ import json
 import unittest
 
 import ggsipu_result
-from ggsipu_result.pdftotext import _invoke_pdftotext
 
 # Configure path environment
 TESTS_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -50,15 +49,3 @@ class data_process_TestCases(unittest.TestCase):
             self.assertEqual(json_dump, dumpf.read())
 
 
-class pdftotext_TestCases(unittest.TestCase):
-
-    def test_invoke_pdftotext(self):
-        codes = [1, 2, 3, 99]
-        rc = _invoke_pdftotext(['--help'], verbose=True)
-        self.assertIn(rc, codes)
-
-    def test_iter_pages(self):
-        pdf_file = os.path.join(RESOURCE_ROOT, 'CSE_Result.pdf')
-        for i, page in enumerate(ggsipu_result.iter_pages(pdf_file, verbose=True)):
-            with open(os.path.join(RESOURCE_ROOT, 'CSE_Result', str(i+1) + '.txt'), 'r') as txtf:
-                self.assertEqual(txtf.read(), page)

@@ -1,42 +1,54 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
-import re
+#long_description = """
+#A python module for extraction of results from
+#GGSIPU results pdf. It is capable of:-
+#
+#- Extraction of Results, Subjects details from pdfs.
+#- Dumping the extracted data in JSON format.
+#"""
 
-long_description = """
-A python module for extraction of results from
-GGSIPU results pdf. It is capable of:-
 
-- Extraction of Results, Subjects details from pdfs.
-- Dumping the extracted data in JSON format.
-"""
+from setuptools import setup
+from os import path
 
-VERSIONFILE="ggsipu_result/_version.py"
-verstrline = open(VERSIONFILE, "r").read()
-VSRE = r"^__version__ = ['\"]([^'\"]*)['\"]"
-mo = re.search(VSRE, verstrline, re.M)
-if mo:
-    verstr = mo.group(1)
-else:
-    raise RuntimeError("Unable to find version string in %s." % (VERSIONFILE))
+import ggsipu_result as package
+
+
+with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding="utf8") as f:
+    readme = f.read()
 
 setup(
-        name="ggsipu_result",
-        version=verstr,
-        description="GGSIPU Result Extraction",
-        long_description=long_description,
-        author="Ashutosh Varma",
-        author_email="ashutoshvarma11@live.com",
-        maintainer="Ashutosh Varma",
-        maintainer_email="ashutoshvarma11@live.com",
-        url="https://github.com/ashutoshvarma/ggsipu_result",
-        classifiers = [
-            "Development Status :: 0 - InActive Development",
-            "Intended Audience :: Developers",
-            "License :: OSI Approved :: MIT License",
-            "Programming Language :: Python :: 3",
-            "Operating System :: Windows OR UNIX",
-            "Topic :: Software Development :: Libraries :: Python Modules",
-            ],
-        packages=["ggsipu_result"],
-    )
+    name='ggsipu_result',
+    version=package.__version__,
+    packages=['ggsipu_result'],
+    install_requires=[
+        'pyxpdf ; python_version == "0.1.1"',
+    ],
+    description='GGSIPU Results PDF parser and analyzer',
+    long_description=readme,
+    long_description_content_type='text/markdown',
+    author='Ashutosh Varma',
+    author_email='ashutoshvarma11@live.com',
+    url='https://github.com/ashutoshvarma/ggsipu_result',
+    #scripts=[
+    #    'tools/dumppdf.py',
+    #],
+    keywords=[
+        'ggsipu result',
+        'ipu result converter',
+        'cgpa calculator',
+    ],
+    python_requires='>=3.4',
+    classifiers=[
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3 :: Only',
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Console',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Topic :: Text Processing',
+    ],
+)
