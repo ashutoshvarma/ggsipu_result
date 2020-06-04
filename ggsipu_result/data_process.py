@@ -63,10 +63,10 @@ def _get_batch(data):
     other than digit + ':' + zero or more '0's
 
     Args:
-        data: single line of string having batch details       
+        data: single line of string having batch details
 
     Return:
-        int type if batch year found else None 
+        int type if batch year found else None
     """
     RE_BATCH = re.compile(r'(?:Batch\D*:\s*0*)(\d+)')
     match = RE_BATCH.search(data)
@@ -78,7 +78,7 @@ def _iter_paper_id_credits(data):
     Iterate the paper ids in given data
 
     Match 5 digit number followed by '(' with atleast one digit
-    and completed by ')' from begininig of each words in given 
+    and completed by ')' from begininig of each words in given
     'data' as paper ids are followed by their credit number.
     Example:- 98768(3) 98767(2)
 
@@ -88,7 +88,7 @@ def _iter_paper_id_credits(data):
     Return:
         Generator object of (paper_id, paper_credit)
     """
-    RE_PAPER_ID = re.compile(r'^(?P<paper_id>\d{5})\((?P<paper_credit>\d+)\)')
+    RE_PAPER_ID = re.compile(r'^(?P<paper_id>\d{5,6})\((?P<paper_credit>\d+)\)')
     for word in data.split():
         match = RE_PAPER_ID.search(word)
         paper_id = match.group('paper_id') if match else None
