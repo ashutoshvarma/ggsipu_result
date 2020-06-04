@@ -7,6 +7,7 @@ dist: xenial
 jobs:
   include:
     - python: 3.8
+      env: BUILD=1
     - python: 3.7
     - python: 3.6
     - python: 3.5
@@ -18,4 +19,51 @@ install:
 
 script:
   - python -m unittest Tests.tests
+  - |
+    if [ "${BUILD:-}" != "" ]; then
+      python setup.py sdist bdist_wheel
+    fi
+  
+
+before_deploy:
+  - ls dist/
+
+deploy:
+  # Deploy on tags to GitHub Releases
+  - provider: releases
+    api_key:
+      secure: l1AalRHfQaE7WdymvJaiPGmpUfBFED53jsD8dKsMZoVntlEAcIgjh52gwLkyaMyfgy1zhJhFwsiYKELHydIgikykKsXFZiyoTBs4uKtJk235gr0Zb91yrggXeyWb9TqAZVuH2UuKg8xmbSwbHxYaqfS0abRQxp9EJHIu8vSEcgwWVDEarYNf/hDNlJyCznyqDp+0Ty3yzacWOehq7J54Xc2F1lLjZ2qU3/4+yIz01pGXJm094byw0ZAwrTWplOJ2JlmyxbMPqr2ZESrkah5hXeUQs5m3+izZXjrgm08ULWddDTMddIRzdWP8YZtkn6CaDp3uVcwpGEiiES8VsXgSoQsyF9oMEPZt6XSwelNA+kHRgmCtgTvRA48UeAwnVHf+WK5vD6LxM6UWpC7rQfeI8m9T/+l3EIsMdcUm53Tuyuo1LJiazQCPZJyHSonccJes8t/QMTvr4YFOLem2sG/2ihJrH0vvEwrmxMLa9lv8CT/YuQukwT5trMC2uADdynmfqnv7KigTV9h7NajwRUfmpkgE0YyhCwwlKW90oFGXR57O/2AfBH1tyXEpRsfH4TAkahhnRVr404tPMCk7nxfwKygAb5PPx6ow9BD4ouFcCjej5ZCT0QsZJWUTsaYkOYk82MXuo0IL8zmnmGb+WxXqAZjC5EaJEevTDH3O7lHDbjc=
+    file_glob: true
+    file: "dist/*"
+    skip_cleanup: true
+    on:
+      repo: ashutoshvarma/ggsipu_result
+      tags: true
+      condition: -z "${BUILD:-}"
+  # Deploy master non-tags to test PyPI
+  - provider: pypi
+    server: https://test.pypi.org/legacy/
+    user: __token__
+    password:
+      secure: 0dvy3+R/oNtocSNmqcJpDijXO4D1BIylpaCwTb7pILNkqwun8C4Ekp/rbvSbXJ/sRcQFg3v1LjwhoNe/AyJmpGMRz56I3JpjkL+UUfakr5TLT4U17xw48XOQkdqZOxF4cRCuiF4u2WoWe+aX9LZxWjW4vDl9nVSOqWftFhKAAkZB8TJns6xXAwAp4EUGkNRGzbrgVmKJpSKYlQuVA0SmwlgiyIg5W2A+waJTsphQaqaKI7L5uUuQ9/Vf6dEKrawS8AHodtwJfAcjHLSX33WHrhwFPc6ZaRIVtZAckVMtUG/3px79YGTU6VBApC69sqRGeGHRfZWZN7m30PZ7Hek5D3L1JVXphNB3m2VC4kKLMAyNTwgwSH2z5sSexPDSiWa/kTAiqIkmjmeRz5FcqOnXrgcdxdwYVDo8Jb1vqN1Wx+BU4bp/OLz2XImRqcr5Dry0xqwdXdDqMm47bB0bKchzvdRupYWHb+X4Sna3POxwp8F9wSjJl3WgKwuEW2YUbPEuKbp+CDdb55Gxew+T3NBNLc5DKDRX6/zXbGdg3QvZmw5CKYEQDHNdwRryO8EIv7I4GbZrpzi8EXntWE0kwZe5TG4jPLnv2e3RBE+NnmD4jj/xwyQaDdKOsNQic+zuywPPLk8ozaoQXTByvi7KpnSFGhhYXuLRqkn/fwRnlPj9q98=
+    distributions: clean_ext
+    skip_existing: true
+    skip_cleanup: true
+    on:
+      repo: ashutoshvarma/ggsipu_result
+      tags: false
+      branch: master
+      condition: -z "${BUILD:-}"
+  # Deploy on tags to PyPI
+  - provider: pypi
+    user: __token__
+    password:
+      secure: FLA5S/KEo9G+JPTP9Ih73e8UY9SvTz8EIyNei9vp73qLBtFmLbZ1SWh+LoH9QouXQxHgIlZNi6mNJCgrpZfIc6urJm7rLQGYZmGqsKgE2hAAoDcTpLdT2J4nXW9mazJcw5qahO1T7MVYL6oafXtNHo4Udocihwcr53MnmxsMjNVKXc2TBJOF94V/c3bFWNFDuZ6cOFf++dDhgQ/T68gHERXoNFnzTklyusDUb7dTYksarr3sYUMwxv3X1LAljnNaFI7BDjCVdu+ODMsL3GtECml4t+lmX9cbyNKnusi3TRuGaFLI7Xn1ybmFoRZDXb4OJbJY5bHe6p9EXT/1W34W7EbHnTO1L62m8HLvWdfrPOZN07LkWXFTf7szbTA84U6TyHaQO7uFEA4PGp3rl1xnh+BLh+cjdVOoQzSihGG4xFZbjzZseVsF4uwaAMc7oA0jDUm0kktDpIH8ip4loXn8C4zIxKLqb3O3bHMKEgalN6GTrbsFXBLV7dnGa37KawuRFjwV/U21D1ms9RhaF3/39r/KofaEkEd8RYEMd97lP82DXOpIb8g0TPpwqo19+/LEGQ3Q8kQjkOezYwznv3jayFhLwO3oSnHEQ/41XjMTRR74yXKwy/XG2ZsSLHtfgAEpxjBRbvRT3aoATh1BmzafRFBf0a304bBv/uokosPVo0k=
+    distributions: clean_ext
+    skip_existing: true
+    skip_cleanup: true
+    on:
+      repo: ashutoshvarma/ggsipu_result
+      tags: true
+      condition: -z "${BUILD:-}"
 
