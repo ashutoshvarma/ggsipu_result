@@ -13,7 +13,7 @@ from setuptools import setup
 from os import path
 
 # bump ggsipu_result/__init__.py version as well.
-VERSION = 0.1
+VERSION = 0.1.1
 
 with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding="utf8") as f:
     readme = f.read()
