@@ -1,7 +1,9 @@
-# GGSIPU_result
-[![Build Status](https://travis-ci.com/ashutoshvarma/ggsipu_result.svg?branch=master)](https://travis-ci.com/ashutoshvarma/ggsipu_result)
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-
+# ggsipu_result
+[![Travis (.com)](https://img.shields.io/travis/com/ashutoshvarma/ggsipu_result?style=for-the-badge)](https://travis-ci.com/github/ashutoshvarma/ggsipu_result/)
+[![GitHub license](https://img.shields.io/github/license/ashutoshvarma/ggsipu_result?style=for-the-badge)](https://github.com/ashutoshvarma/ggsipu_result/blob/master/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/ggsipu_result?color=blue&style=for-the-badge)](https://pypi.org/project/ggsipu-result/)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/ggsipu_result?style=for-the-badge)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/ggsipu_result?style=for-the-badge)
 
 **ggsipu_result** is a A python module for extraction of results from GGSIPU results pdf. It is capable of:-
 
@@ -20,7 +22,7 @@ results = []
 for page in iter_pages(FILE):
     if has_page_results(page):
         results = results + [r for r in iter_results(page) if r.batch == 2018]
-        
+
 results.sort(key=lambda x: x.cgpa, reverse=True)
 
 for i, result in enumerate(results[:5]):
@@ -46,10 +48,15 @@ pip install ggsipu-result
 `ggsipu_result` includes a test suite built on the unittest framework. All tests are located in the "Tests" folder.
 Tests can be run from the command line by:
 
-  
+
 ```bash
 python -m unittest Tests.tests
 ```
+
+## Changelog
+### v0.1.1 (05-06-2020)
+- fix [#1](https://github.com/ashutoshvarma/ggsipu_result/issues/1): include support for 6 digit paper codes
+### v0.1 (initial release)
 
 ## License
 
