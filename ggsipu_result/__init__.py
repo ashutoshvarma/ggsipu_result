@@ -7,10 +7,10 @@ from .data_process import (
 )
 
 from .objects import Subject, Result, Student, Marks
-
 from .util import toJSON
 
-__version__ = "0.1.1"
+__version__ = "0.2"
+
 
 def iter_pages(pdf, start=0, end=0):
     doc = xpdf.Document(pdf)
