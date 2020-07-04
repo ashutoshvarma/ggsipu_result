@@ -12,15 +12,23 @@
 from setuptools import setup
 from os import path
 
-# bump ggsipu_result/__init__.py version as well.
-VERSION = "0.1.1"
+
+def version():
+    base_dir = os.path.abspath(os.path.dirname(sys.argv[0]))
+    _VERSION = None
+    with open(os.path.join(base_dir, 'ggsipu_result', '__init__.py')) as f:
+        _VERSION = re.search(
+            r'__version__\s*=\s*"([^"]+)"', f.read()).group(1)
+        assert _VERSION
+    return _VERSION
+
 
 with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding="utf8") as f:
     readme = f.read()
 
 setup(
     name='ggsipu_result',
-    version=VERSION,
+    version=version(),
     packages=['ggsipu_result'],
     install_requires=[
         'pyxpdf>=0.2.1',
