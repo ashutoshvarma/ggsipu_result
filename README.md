@@ -8,6 +8,7 @@
 **ggsipu_result** is a A python module for extraction of results from GGSIPU results pdf. It is capable of:-
 
 - Extraction of Results, Subjects details from pdfs.
+- Extract Student's photo from pdfs.
 - Dumping the extracted data in JSON format.
 
 
@@ -36,7 +37,7 @@ for i, result in enumerate(results[:5]):
 # 4. Result(Sem 1): [40116403218]RIGVED ALANKAR(2018) [CGPA: 8.5]
 # 5. Result(Sem 1): [01616403218]CHAITANYA GIRI(2018) [CGPA: 8.46]
 ```
-For more examples please see `Sample_Code` folder
+For more examples please see [`Sample_Code`](https://github.com/ashutoshvarma/ggsipu_result/tree/master/Sample_Code) folder
 
 ## Install
 ```
@@ -54,6 +55,9 @@ python -m unittest Tests.tests
 ```
 
 ## Changelog
+### v0.2 (04-07-2020)
+- add support for extraction of student's photo from pdfs
+- API: new function `parse_result_pdf` to parse entire pdf in one go.
 ### v0.1.1 (05-06-2020)
 - fix [#1](https://github.com/ashutoshvarma/ggsipu_result/issues/1): include support for 6 digit paper codes
 ### v0.1 (initial release)
