@@ -8,15 +8,16 @@
 #- Dumping the extracted data in JSON format.
 #"""
 
-
+import sys
 from setuptools import setup
 from os import path
 
 
 def version():
-    base_dir = os.path.abspath(os.path.dirname(sys.argv[0]))
+    import re
+    base_dir = path.abspath(path.dirname(sys.argv[0]))
     _VERSION = None
-    with open(os.path.join(base_dir, 'ggsipu_result', '__init__.py')) as f:
+    with open(path.join(base_dir, 'ggsipu_result', '__init__.py')) as f:
         _VERSION = re.search(
             r'__version__\s*=\s*"([^"]+)"', f.read()).group(1)
         assert _VERSION
