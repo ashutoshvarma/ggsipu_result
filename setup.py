@@ -23,7 +23,7 @@ setup(
     version=VERSION,
     packages=['ggsipu_result'],
     install_requires=[
-        'pyxpdf==0.1.1',
+        'pyxpdf>=0.2.1',
     ],
     description='GGSIPU Results PDF parser and analyzer',
     long_description=readme,
