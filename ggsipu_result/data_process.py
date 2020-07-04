@@ -14,6 +14,14 @@ TODO:
 from .objects import Student, Marks, Result, Subject
 from .util import rm_extra_whitespace, group_iter
 import re
+from pyxpdf import Document
+from pyxpdf.xpdf import PDFImageOutput, TextControl
+
+
+TEXT_LAYOUT_MODE = 'simple'
+
+IMG_CHECK_MIN = 1.8
+IMG_CHECK_MAX = 2.0
 
 
 class DataProcessingError(Exception):
@@ -26,7 +34,6 @@ class DataNotSufficientError(DataProcessingError):
 
 class DataNotFoundError(DataProcessingError):
     pass
-
 
 
 def _get_scheme_dates(data):
@@ -88,7 +95,8 @@ def _iter_paper_id_credits(data):
     Return:
         Generator object of (paper_id, paper_credit)
     """
-    RE_PAPER_ID = re.compile(r'^(?P<paper_id>\d{5,6})\((?P<paper_credit>\d+)\)')
+    RE_PAPER_ID = re.compile(
+        r'^(?P<paper_id>\d{5,6})\((?P<paper_credit>\d+)\)')
     for word in data.split():
         match = RE_PAPER_ID.search(word)
         paper_id = match.group('paper_id') if match else None
@@ -331,3 +339,81 @@ def iter_results(raw_data, force=False):
                     paper_id_credit[0], minor, major, total_grade[0], total_grade[1], paper_id_credit[1])
                 new_result.add_mark(paper_id_credit[0], temp_mark)
             yield new_result
+
+
+def _check_for_image(doc, page_index, result, img):
+    """
+    Check whether roll number's bbox's x1 and image's bbox's
+    x1 is close enough.
+    """
+    tbbox = doc[page_index].find_text(result.roll_num)
+    ibbox = img.bbox
+    return IMG_CHECK_MIN < tbbox[1] - ibbox[1] <= IMG_CHECK_MAX
+
+
+def _get_images_for_results(doc, page_index, results):
+    """
+    Get the respective image of student and save it in Result.image
+    attribute.
+    """
+    img_out = PDFImageOutput(doc)
+    imgs = [img for img in img_out.get(
+        page_index) if img.image_type == 'image']
+
+    if len(imgs) == len(results):
+        for i, r in enumerate(results):
+            r.image = imgs[i].image
+    else:
+        j = 0
+        for i, r in enumerate(results):
+            if j == len(imgs):
+                break
+            if _check_for_image(doc, page_index, r, imgs[j]):
+                r.image = imgs[j].image
+                j += 1
+
+
+def parse_result_pdf(pdf, get_images=True):
+    """Parse the entire results PDF and gives all `Results` and `Subjects`
+
+    Retrives results and subjects details data from pdf and if `get_images`
+    then also save photo (if exixts) of each student in respective
+    `Result.image` attribute.
+
+    Example:
+        >>> subs, results = parse_result_pdf("result.pdf")
+        >>> print(subs)
+            {'98101': <Subject paper_id=98101 name=COMMUNICATION SKILLS - I paper_code=HS101>,
+             '99103': <Subject paper_id=99103 name=CHEMISTRY I paper_code=BA103>,
+             '15105': <Subject paper_id=15105 name=INTRODUCTION TO COMPUTERS paper_code=IT105>,
+            ...
+        >>> print(results)
+            [<Result sem=1 roll=42016403215 name=PRASHANT SINGH batch=2015 cgpa=0>,
+             <Result sem=3 roll=42016403215 name=PRASHANT SINGH batch=2015 cgpa=0>,
+             <Result sem=3 roll=42116403215 name=MANJEET KUMAR batch=2015 cgpa=0>,
+            ...
+
+    Args:
+        pdf: pdf file to Parse
+        get_images: whether to get students images or not.
+
+    Returns:
+        tuple of `Subject` dict with `paper_id` as key and `Result`
+
+    """
+    subs = {}
+    results = []
+    doc = Document(pdf)
+    control = TextControl(mode=TEXT_LAYOUT_MODE)
+    for p in doc:
+        text = p.text(control=control)
+        if has_page_subejcts(text):
+            for sub in iter_subjects(text):
+                subs[sub.paper_id] = sub
+        elif has_page_results(text):
+            page_results = list(iter_results(text))
+            if get_images:
+                _get_images_for_results(doc, p.index, page_results)
+            results.extend(page_results)
+
+    return (subs, results)
