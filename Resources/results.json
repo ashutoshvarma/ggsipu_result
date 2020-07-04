@@ -1,6 +1,7 @@
 [
     {
         "batch": 2018,
+        "image": null,
         "marks": {
             "15105": {
                 "grade": "B+",
@@ -8,6 +9,7 @@
                 "minor": 16,
                 "paper_credit": 3,
                 "paper_id": 15105,
+                "subject": null,
                 "total": 64
             },
             "15107": {
@@ -16,6 +18,7 @@
                 "minor": 13,
                 "paper_credit": 4,
                 "paper_id": 15107,
+                "subject": null,
                 "total": 52
             },
             "15155": {
@@ -24,6 +27,7 @@
                 "minor": 32,
                 "paper_credit": 1,
                 "paper_id": 15155,
+                "subject": null,
                 "total": 81
             },
             "15157": {
@@ -32,6 +36,7 @@
                 "minor": 17,
                 "paper_credit": 1,
                 "paper_id": 15157,
+                "subject": null,
                 "total": 42
             },
             "15159": {
@@ -40,6 +45,7 @@
                 "minor": 26,
                 "paper_credit": 1,
                 "paper_id": 15159,
+                "subject": null,
                 "total": 79
             },
             "98101": {
@@ -48,6 +54,7 @@
                 "minor": 17,
                 "paper_credit": 3,
                 "paper_id": 98101,
+                "subject": null,
                 "total": 70
             },
             "98119": {
@@ -56,6 +63,7 @@
                 "minor": null,
                 "paper_credit": 1,
                 "paper_id": 98119,
+                "subject": null,
                 "total": 65
             },
             "99103": {
@@ -64,6 +72,7 @@
                 "minor": 15,
                 "paper_credit": 3,
                 "paper_id": 99103,
+                "subject": null,
                 "total": 61
             },
             "99109": {
@@ -72,6 +81,7 @@
                 "minor": 6,
                 "paper_credit": 4,
                 "paper_id": 99109,
+                "subject": null,
                 "total": 11
             },
             "99111": {
@@ -80,6 +90,7 @@
                 "minor": 15,
                 "paper_credit": 3,
                 "paper_id": 99111,
+                "subject": null,
                 "total": 60
             },
             "99151": {
@@ -88,6 +99,7 @@
                 "minor": 28,
                 "paper_credit": 1,
                 "paper_id": 99151,
+                "subject": null,
                 "total": 73
             },
             "99153": {
@@ -96,6 +108,7 @@
                 "minor": 36,
                 "paper_credit": 1,
                 "paper_id": 99153,
+                "subject": null,
                 "total": 78
             }
         },
@@ -105,6 +118,7 @@
     },
     {
         "batch": 2018,
+        "image": null,
         "marks": {
             "15105": {
                 "grade": "A",
@@ -112,6 +126,7 @@
                 "minor": 23,
                 "paper_credit": 3,
                 "paper_id": 15105,
+                "subject": null,
                 "total": 69
             },
             "15107": {
@@ -120,6 +135,7 @@
                 "minor": 9,
                 "paper_credit": 4,
                 "paper_id": 15107,
+                "subject": null,
                 "total": 31
             },
             "15155": {
@@ -128,6 +144,7 @@
                 "minor": 31,
                 "paper_credit": 1,
                 "paper_id": 15155,
+                "subject": null,
                 "total": 78
             },
             "15157": {
@@ -136,6 +153,7 @@
                 "minor": 12,
                 "paper_credit": 1,
                 "paper_id": 15157,
+                "subject": null,
                 "total": 32
             },
             "15159": {
@@ -144,6 +162,7 @@
                 "minor": 29,
                 "paper_credit": 1,
                 "paper_id": 15159,
+                "subject": null,
                 "total": 80
             },
             "98101": {
@@ -152,6 +171,7 @@
                 "minor": 21,
                 "paper_credit": 3,
                 "paper_id": 98101,
+                "subject": null,
                 "total": 66
             },
             "98119": {
@@ -160,6 +180,7 @@
                 "minor": null,
                 "paper_credit": 1,
                 "paper_id": 98119,
+                "subject": null,
                 "total": 62
             },
             "99103": {
@@ -168,6 +189,7 @@
                 "minor": 15,
                 "paper_credit": 3,
                 "paper_id": 99103,
+                "subject": null,
                 "total": 52
             },
             "99109": {
@@ -176,6 +198,7 @@
                 "minor": 7,
                 "paper_credit": 4,
                 "paper_id": 99109,
+                "subject": null,
                 "total": 13
             },
             "99111": {
@@ -184,6 +207,7 @@
                 "minor": 12,
                 "paper_credit": 3,
                 "paper_id": 99111,
+                "subject": null,
                 "total": 41
             },
             "99151": {
@@ -192,6 +216,7 @@
                 "minor": 27,
                 "paper_credit": 1,
                 "paper_id": 99151,
+                "subject": null,
                 "total": 71
             },
             "99153": {
@@ -200,6 +225,7 @@
                 "minor": 31,
                 "paper_credit": 1,
                 "paper_id": 99153,
+                "subject": null,
                 "total": 70
             }
         },
@@ -209,6 +235,7 @@
     },
     {
         "batch": 2018,
+        "image": null,
         "marks": {
             "15105": {
                 "grade": "B",
@@ -216,6 +243,7 @@
                 "minor": 16,
                 "paper_credit": 3,
                 "paper_id": 15105,
+                "subject": null,
                 "total": 54
             },
             "15107": {
@@ -224,6 +252,7 @@
                 "minor": 11,
                 "paper_credit": 4,
                 "paper_id": 15107,
+                "subject": null,
                 "total": 42
             },
             "15155": {
@@ -232,6 +261,7 @@
                 "minor": 34,
                 "paper_credit": 1,
                 "paper_id": 15155,
+                "subject": null,
                 "total": 82
             },
             "15157": {
@@ -240,6 +270,7 @@
                 "minor": 13,
                 "paper_credit": 1,
                 "paper_id": 15157,
+                "subject": null,
                 "total": 40
             },
             "15159": {
@@ -248,6 +279,7 @@
                 "minor": 30,
                 "paper_credit": 1,
                 "paper_id": 15159,
+                "subject": null,
                 "total": 83
             },
             "98101": {
@@ -256,6 +288,7 @@
                 "minor": 22,
                 "paper_credit": 3,
                 "paper_id": 98101,
+                "subject": null,
                 "total": 74
             },
             "98119": {
@@ -264,6 +297,7 @@
                 "minor": null,
                 "paper_credit": 1,
                 "paper_id": 98119,
+                "subject": null,
                 "total": 62
             },
             "99103": {
@@ -272,6 +306,7 @@
                 "minor": 16,
                 "paper_credit": 3,
                 "paper_id": 99103,
+                "subject": null,
                 "total": 45
             },
             "99109": {
@@ -280,6 +315,7 @@
                 "minor": 11,
                 "paper_credit": 4,
                 "paper_id": 99109,
+                "subject": null,
                 "total": 33
             },
             "99111": {
@@ -288,6 +324,7 @@
                 "minor": 16,
                 "paper_credit": 3,
                 "paper_id": 99111,
+                "subject": null,
                 "total": 54
             },
             "99151": {
@@ -296,6 +333,7 @@
                 "minor": 28,
                 "paper_credit": 1,
                 "paper_id": 99151,
+                "subject": null,
                 "total": 72
             },
             "99153": {
@@ -304,6 +342,7 @@
                 "minor": 38,
                 "paper_credit": 1,
                 "paper_id": 99153,
+                "subject": null,
                 "total": 84
             }
         },
@@ -313,6 +352,7 @@
     },
     {
         "batch": 2018,
+        "image": null,
         "marks": {
             "15105": {
                 "grade": "B+",
@@ -320,6 +360,7 @@
                 "minor": 16,
                 "paper_credit": 3,
                 "paper_id": 15105,
+                "subject": null,
                 "total": 57
             },
             "15107": {
@@ -328,6 +369,7 @@
                 "minor": 14,
                 "paper_credit": 4,
                 "paper_id": 15107,
+                "subject": null,
                 "total": 65
             },
             "15155": {
@@ -336,6 +378,7 @@
                 "minor": 34,
                 "paper_credit": 1,
                 "paper_id": 15155,
+                "subject": null,
                 "total": 83
             },
             "15157": {
@@ -344,6 +387,7 @@
                 "minor": 22,
                 "paper_credit": 1,
                 "paper_id": 15157,
+                "subject": null,
                 "total": 55
             },
             "15159": {
@@ -352,6 +396,7 @@
                 "minor": 27,
                 "paper_credit": 1,
                 "paper_id": 15159,
+                "subject": null,
                 "total": 80
             },
             "98101": {
@@ -360,6 +405,7 @@
                 "minor": 22,
                 "paper_credit": 3,
                 "paper_id": 98101,
+                "subject": null,
                 "total": 78
             },
             "98119": {
@@ -368,6 +414,7 @@
                 "minor": null,
                 "paper_credit": 1,
                 "paper_id": 98119,
+                "subject": null,
                 "total": 63
             },
             "99103": {
@@ -376,6 +423,7 @@
                 "minor": 16,
                 "paper_credit": 3,
                 "paper_id": 99103,
+                "subject": null,
                 "total": 59
             },
             "99109": {
@@ -384,6 +432,7 @@
                 "minor": 7,
                 "paper_credit": 4,
                 "paper_id": 99109,
+                "subject": null,
                 "total": 50
             },
             "99111": {
@@ -392,6 +441,7 @@
                 "minor": 15,
                 "paper_credit": 3,
                 "paper_id": 99111,
+                "subject": null,
                 "total": 45
             },
             "99151": {
@@ -400,6 +450,7 @@
                 "minor": 27,
                 "paper_credit": 1,
                 "paper_id": 99151,
+                "subject": null,
                 "total": 71
             },
             "99153": {
@@ -408,6 +459,7 @@
                 "minor": 25,
                 "paper_credit": 1,
                 "paper_id": 99153,
+                "subject": null,
                 "total": 66
             }
         },
@@ -417,6 +469,7 @@
     },
     {
         "batch": 2018,
+        "image": null,
         "marks": {
             "15105": {
                 "grade": "B+",
@@ -424,6 +477,7 @@
                 "minor": 14,
                 "paper_credit": 3,
                 "paper_id": 15105,
+                "subject": null,
                 "total": 64
             },
             "15107": {
@@ -432,6 +486,7 @@
                 "minor": 10,
                 "paper_credit": 4,
                 "paper_id": 15107,
+                "subject": null,
                 "total": 29
             },
             "15155": {
@@ -440,6 +495,7 @@
                 "minor": 33,
                 "paper_credit": 1,
                 "paper_id": 15155,
+                "subject": null,
                 "total": 81
             },
             "15157": {
@@ -448,6 +504,7 @@
                 "minor": 20,
                 "paper_credit": 1,
                 "paper_id": 15157,
+                "subject": null,
                 "total": 50
             },
             "15159": {
@@ -456,6 +513,7 @@
                 "minor": 25,
                 "paper_credit": 1,
                 "paper_id": 15159,
+                "subject": null,
                 "total": 76
             },
             "98101": {
@@ -464,6 +522,7 @@
                 "minor": 19,
                 "paper_credit": 3,
                 "paper_id": 98101,
+                "subject": null,
                 "total": 67
             },
             "98119": {
@@ -472,6 +531,7 @@
                 "minor": null,
                 "paper_credit": 1,
                 "paper_id": 98119,
+                "subject": null,
                 "total": 0
             },
             "99103": {
@@ -480,6 +540,7 @@
                 "minor": 14,
                 "paper_credit": 3,
                 "paper_id": 99103,
+                "subject": null,
                 "total": 46
             },
             "99109": {
@@ -488,6 +549,7 @@
                 "minor": 5,
                 "paper_credit": 4,
                 "paper_id": 99109,
+                "subject": null,
                 "total": 7
             },
             "99111": {
@@ -496,6 +558,7 @@
                 "minor": 13,
                 "paper_credit": 3,
                 "paper_id": 99111,
+                "subject": null,
                 "total": 40
             },
             "99151": {
@@ -504,6 +567,7 @@
                 "minor": 27,
                 "paper_credit": 1,
                 "paper_id": 99151,
+                "subject": null,
                 "total": 72
             },
             "99153": {
@@ -512,6 +576,7 @@
                 "minor": 39,
                 "paper_credit": 1,
                 "paper_id": 99153,
+                "subject": null,
                 "total": 81
             }
         },
@@ -521,6 +586,7 @@
     },
     {
         "batch": 2018,
+        "image": null,
         "marks": {
             "15105": {
                 "grade": "B+",
@@ -528,6 +594,7 @@
                 "minor": 21,
                 "paper_credit": 3,
                 "paper_id": 15105,
+                "subject": null,
                 "total": 55
             },
             "15107": {
@@ -536,6 +603,7 @@
                 "minor": 14,
                 "paper_credit": 4,
                 "paper_id": 15107,
+                "subject": null,
                 "total": 50
             },
             "15155": {
@@ -544,6 +612,7 @@
                 "minor": 30,
                 "paper_credit": 1,
                 "paper_id": 15155,
+                "subject": null,
                 "total": 75
             },
             "15157": {
@@ -552,6 +621,7 @@
                 "minor": 16,
                 "paper_credit": 1,
                 "paper_id": 15157,
+                "subject": null,
                 "total": 44
             },
             "15159": {
@@ -560,6 +630,7 @@
                 "minor": 29,
                 "paper_credit": 1,
                 "paper_id": 15159,
+                "subject": null,
                 "total": 80
             },
             "98101": {
@@ -568,6 +639,7 @@
                 "minor": 20,
                 "paper_credit": 3,
                 "paper_id": 98101,
+                "subject": null,
                 "total": 60
             },
             "98119": {
@@ -576,6 +648,7 @@
                 "minor": null,
                 "paper_credit": 1,
                 "paper_id": 98119,
+                "subject": null,
                 "total": 61
             },
             "99103": {
@@ -584,6 +657,7 @@
                 "minor": 16,
                 "paper_credit": 3,
                 "paper_id": 99103,
+                "subject": null,
                 "total": 54
             },
             "99109": {
@@ -592,6 +666,7 @@
                 "minor": 11,
                 "paper_credit": 4,
                 "paper_id": 99109,
+                "subject": null,
                 "total": 29
             },
             "99111": {
@@ -600,6 +675,7 @@
                 "minor": 13,
                 "paper_credit": 3,
                 "paper_id": 99111,
+                "subject": null,
                 "total": 57
             },
             "99151": {
@@ -608,6 +684,7 @@
                 "minor": 29,
                 "paper_credit": 1,
                 "paper_id": 99151,
+                "subject": null,
                 "total": 75
             },
             "99153": {
@@ -616,6 +693,7 @@
                 "minor": 35,
                 "paper_credit": 1,
                 "paper_id": 99153,
+                "subject": null,
                 "total": 74
             }
         },
@@ -625,6 +703,7 @@
     },
     {
         "batch": 2018,
+        "image": null,
         "marks": {
             "15105": {
                 "grade": "F",
@@ -632,6 +711,7 @@
                 "minor": 8,
                 "paper_credit": 3,
                 "paper_id": 15105,
+                "subject": null,
                 "total": 31
             },
             "15107": {
@@ -640,6 +720,7 @@
                 "minor": 9,
                 "paper_credit": 4,
                 "paper_id": 15107,
+                "subject": null,
                 "total": 40
             },
             "15155": {
@@ -648,6 +729,7 @@
                 "minor": 34,
                 "paper_credit": 1,
                 "paper_id": 15155,
+                "subject": null,
                 "total": 83
             },
             "15157": {
@@ -656,6 +738,7 @@
                 "minor": 21,
                 "paper_credit": 1,
                 "paper_id": 15157,
+                "subject": null,
                 "total": 55
             },
             "15159": {
@@ -664,6 +747,7 @@
                 "minor": 28,
                 "paper_credit": 1,
                 "paper_id": 15159,
+                "subject": null,
                 "total": 81
             },
             "98101": {
@@ -672,6 +756,7 @@
                 "minor": 22,
                 "paper_credit": 3,
                 "paper_id": 98101,
+                "subject": null,
                 "total": 82
             },
             "98119": {
@@ -680,6 +765,7 @@
                 "minor": null,
                 "paper_credit": 1,
                 "paper_id": 98119,
+                "subject": null,
                 "total": 63
             },
             "99103": {
@@ -688,6 +774,7 @@
                 "minor": 15,
                 "paper_credit": 3,
                 "paper_id": 99103,
+                "subject": null,
                 "total": 55
             },
             "99109": {
@@ -696,6 +783,7 @@
                 "minor": 5,
                 "paper_credit": 4,
                 "paper_id": 99109,
+                "subject": null,
                 "total": 11
             },
             "99111": {
@@ -704,6 +792,7 @@
                 "minor": 14,
                 "paper_credit": 3,
                 "paper_id": 99111,
+                "subject": null,
                 "total": 51
             },
             "99151": {
@@ -712,6 +801,7 @@
                 "minor": 27,
                 "paper_credit": 1,
                 "paper_id": 99151,
+                "subject": null,
                 "total": 71
             },
             "99153": {
@@ -720,6 +810,7 @@
                 "minor": 30,
                 "paper_credit": 1,
                 "paper_id": 99153,
+                "subject": null,
                 "total": 64
             }
         },
