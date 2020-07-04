@@ -1,4 +1,5 @@
-import itertools, json
+import itertools
+import json
 
 
 class JSONSerializable:
@@ -30,5 +31,3 @@ def group_iter(it, n, fillvalue):
     group with a fill value
     """
     return itertools.zip_longest(*[iter(it)]*n, fillvalue=fillvalue)
-
-

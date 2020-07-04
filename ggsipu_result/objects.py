@@ -33,18 +33,22 @@ class Subject(JSONSerializable):
     def __str__(self):
         return "{self.paper_id}-{self.name}[{self.paper_code}]".format(self=self)
 
+    def __repr__(self):
+        return "<Subject paper_id={self.paper_id} name={self.name} paper_code={self.paper_code}>".format(self=self)
+
     def __eq__(self, other):
         return self.paper_id == other
 
 
 class Marks(JSONSerializable):
-    def __init__(self, paper_id, minor, major, total, grade=None, paper_credit=None):
+    def __init__(self, paper_id, minor, major, total, grade=None, paper_credit=None, subject=None):
         self.paper_id = paper_id
         self.minor = minor
         self.major = major
         self.total = total
         self.grade = grade
         self.paper_credit = paper_credit
+        self.subject = subject
 
     def __str__(self):
         return "[{self.paper_id}]({self.paper_credit}) Minor-{self.minor}, Major-{self.major}, Total-{self.total}".format(self=self)
@@ -52,17 +56,18 @@ class Marks(JSONSerializable):
 
 class Result(JSONSerializable):
 
-    def __init__(self, roll_num, semester, student_name=None, batch=None, marks=None):
+    def __init__(self, roll_num, semester, student_name=None, batch=None, marks=None, image=None):
         self.semester = semester
         self.roll_num = roll_num
         self.student_name = student_name
         self.batch = batch
         self.marks = marks if marks else {}
+        self.image = image
 
     def get_mark_drops(self, ignore_None=False):
-        """ 
+        """
         Return marks where total in less than passing marks or None
-        
+
         Args:
             include_none: Whether to include marks where total in None or not.
 
@@ -80,7 +85,7 @@ class Result(JSONSerializable):
     Read-only property that accesses the
     get_num_drops()<Result.get_num_drops()> function.
     """
-    
+
     def get_marks_by_paper(self, paper_id):
         return self.marks[paper_id]
 
@@ -130,6 +135,9 @@ class Result(JSONSerializable):
     def __str__(self):
         return "Result(Sem {self.semester}): [{self.roll_num}]{self.student_name}({self.batch}) [CGPA: {self.cgpa}]".format(self=self)
 
+    def __repr__(self):
+        return "<Result sem={self.semester} roll={self.roll_num} name={self.student_name} batch={self.batch} cgpa={self.cgpa}>".format(self=self)
+
 
 class Student(JSONSerializable):
     def __init__(self, roll_num, full_name=None, batch_year=None, programme_code=None,
@@ -172,3 +180,6 @@ class Student(JSONSerializable):
 
     def __str__(self):
         return "{self.name} - {self.id} [{self.batch}]".format(self=self)
+
+    def __repr__(self):
+        return "<Student name={self.name} id={self.id} batch={self.batch}>".format(self=self)

@@ -1,8 +1,8 @@
 from pyxpdf import xpdf
 
 from .data_process import (
-    iter_results, iter_subjects, has_page_results,
-    has_page_subejcts, DataNotFoundError, DataNotSufficientError,
+    iter_results, iter_subjects, has_page_results, has_page_subejcts,
+    parse_result_pdf, DataNotFoundError, DataNotSufficientError,
     DataProcessingError
 )
 
