@@ -9,7 +9,7 @@ from .data_process import (
 from .objects import Subject, Result, Marks
 from .util import toJSON
 
-__version__ = "0.2"
+__version__ = "0.3"
 
 
 def iter_pages(pdf, start=0, end=0):

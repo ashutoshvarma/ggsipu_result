@@ -55,6 +55,9 @@ python -m unittest Tests.tests
 ```
 
 ## Changelog
+### v0.3 (08-07-2020) [Breaking Changes]
+- API: remove unused `Student` class
+- API: merge `Student` properties into `Result`.
 ### v0.2 (04-07-2020)
 - add support for extraction of student's photo from pdfs
 - API: new function `parse_result_pdf` to parse entire pdf in one go.
