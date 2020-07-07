@@ -93,9 +93,9 @@ def _get_programme(data):
 
     match_name = RE_PROGRAMME_NAME.search(data)
     match_code = RE_PROGRAMME_CODE.search(data)
-    code = match_code.group(1) if match_code else None
-    name = match_name.group(1) if match_name else None
-    return rm_extra_whitespace(code), rm_extra_whitespace(name)
+    code = rm_extra_whitespace(match_code.group(1)) if match_code else None
+    name = rm_extra_whitespace(match_name.group(1)) if match_name else None
+    return code, name
 
 
 def _get_institution(data):
@@ -105,9 +105,9 @@ def _get_institution(data):
 
     match_name = RE_INSTITUTION_NAME.search(data)
     match_code = RE_INSTITUTION_CODE.search(data)
-    code = match_code.group(1) if match_code else None
-    name = match_name.group(1) if match_name else None
-    return rm_extra_whitespace(code), rm_extra_whitespace(name)
+    code = rm_extra_whitespace(match_code.group(1)) if match_code else None
+    name = rm_extra_whitespace(match_name.group(1)) if match_name else None
+    return code, name
 
 
 def _iter_paper_id_credits(data):
