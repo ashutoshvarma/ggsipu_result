@@ -1,7 +1,10 @@
 [
     {
         "batch": 2018,
+        "examination_name": "REGULAR  December,   2018",
         "image": null,
+        "institution_code": "164",
+        "institution_name": "UNIVERSITY SCHOOL OF INFORMATION, COMMUNICATION & TECHNOLOGY (FORMERLY USIT)",
         "marks": {
             "15105": {
                 "grade": "B+",
@@ -112,13 +115,18 @@
                 "total": 78
             }
         },
+        "programme_code": "032",
+        "programme_name": "BACHELOR OF TECHNOLOGY (COMPUTER SCIENCE AND ENGINEERING)",
         "roll_num": "70216403218",
         "semester": 1,
         "student_name": "SURAJ SAH"
     },
     {
         "batch": 2018,
+        "examination_name": "REGULAR  December,   2018",
         "image": null,
+        "institution_code": "164",
+        "institution_name": "UNIVERSITY SCHOOL OF INFORMATION, COMMUNICATION & TECHNOLOGY (FORMERLY USIT)",
         "marks": {
             "15105": {
                 "grade": "A",
@@ -229,13 +237,18 @@
                 "total": 70
             }
         },
+        "programme_code": "032",
+        "programme_name": "BACHELOR OF TECHNOLOGY (COMPUTER SCIENCE AND ENGINEERING)",
         "roll_num": "70316403218",
         "semester": 1,
         "student_name": "KUNAL GOENKA"
     },
     {
         "batch": 2018,
+        "examination_name": "REGULAR  December,   2018",
         "image": null,
+        "institution_code": "164",
+        "institution_name": "UNIVERSITY SCHOOL OF INFORMATION, COMMUNICATION & TECHNOLOGY (FORMERLY USIT)",
         "marks": {
             "15105": {
                 "grade": "B",
@@ -346,13 +359,18 @@
                 "total": 84
             }
         },
+        "programme_code": "032",
+        "programme_name": "BACHELOR OF TECHNOLOGY (COMPUTER SCIENCE AND ENGINEERING)",
         "roll_num": "70416403218",
         "semester": 1,
         "student_name": "AKSHAT TYAGI"
     },
     {
         "batch": 2018,
+        "examination_name": "REGULAR  December,   2018",
         "image": null,
+        "institution_code": "164",
+        "institution_name": "UNIVERSITY SCHOOL OF INFORMATION, COMMUNICATION & TECHNOLOGY (FORMERLY USIT)",
         "marks": {
             "15105": {
                 "grade": "B+",
@@ -463,13 +481,18 @@
                 "total": 66
             }
         },
+        "programme_code": "032",
+        "programme_name": "BACHELOR OF TECHNOLOGY (COMPUTER SCIENCE AND ENGINEERING)",
         "roll_num": "70516403218",
         "semester": 1,
         "student_name": "UTSAV SINGHI"
     },
     {
         "batch": 2018,
+        "examination_name": "REGULAR  December,   2018",
         "image": null,
+        "institution_code": "164",
+        "institution_name": "UNIVERSITY SCHOOL OF INFORMATION, COMMUNICATION & TECHNOLOGY (FORMERLY USIT)",
         "marks": {
             "15105": {
                 "grade": "B+",
@@ -580,13 +603,18 @@
                 "total": 81
             }
         },
+        "programme_code": "032",
+        "programme_name": "BACHELOR OF TECHNOLOGY (COMPUTER SCIENCE AND ENGINEERING)",
         "roll_num": "70616403218",
         "semester": 1,
         "student_name": "TENZIN TSECHOK"
     },
     {
         "batch": 2018,
+        "examination_name": "REGULAR  December,   2018",
         "image": null,
+        "institution_code": "164",
+        "institution_name": "UNIVERSITY SCHOOL OF INFORMATION, COMMUNICATION & TECHNOLOGY (FORMERLY USIT)",
         "marks": {
             "15105": {
                 "grade": "B+",
@@ -697,13 +725,18 @@
                 "total": 74
             }
         },
+        "programme_code": "032",
+        "programme_name": "BACHELOR OF TECHNOLOGY (COMPUTER SCIENCE AND ENGINEERING)",
         "roll_num": "70716403218",
         "semester": 1,
         "student_name": "RASHINDRA YADAV"
     },
     {
         "batch": 2018,
+        "examination_name": "REGULAR  December,   2018",
         "image": null,
+        "institution_code": "164",
+        "institution_name": "UNIVERSITY SCHOOL OF INFORMATION, COMMUNICATION & TECHNOLOGY (FORMERLY USIT)",
         "marks": {
             "15105": {
                 "grade": "F",
@@ -814,6 +847,8 @@
                 "total": 64
             }
         },
+        "programme_code": "032",
+        "programme_name": "BACHELOR OF TECHNOLOGY (COMPUTER SCIENCE AND ENGINEERING)",
         "roll_num": "70816403218",
         "semester": 1,
         "student_name": "SRISHTI JHA"

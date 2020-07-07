@@ -6,7 +6,7 @@ from .data_process import (
     DataProcessingError
 )
 
-from .objects import Subject, Result, Student, Marks
+from .objects import Subject, Result, Marks
 from .util import toJSON
 
 __version__ = "0.2"

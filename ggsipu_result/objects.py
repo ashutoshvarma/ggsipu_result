@@ -56,13 +56,20 @@ class Marks(JSONSerializable):
 
 class Result(JSONSerializable):
 
-    def __init__(self, roll_num, semester, student_name=None, batch=None, marks=None, image=None):
+    def __init__(self, roll_num, semester, student_name=None, batch=None, examination_name=None,
+                 programme_code=None, programme_name=None, institution_code=None, institution_name=None,
+                 marks=None, image=None):
         self.semester = semester
         self.roll_num = roll_num
         self.student_name = student_name
         self.batch = batch
         self.marks = marks if marks else {}
         self.image = image
+        self.examination_name = examination_name
+        self.programme_code = programme_code
+        self.programme_name = programme_name
+        self.institution_code = institution_code
+        self.institution_name = institution_name
 
     def get_mark_drops(self, ignore_None=False):
         """
@@ -101,7 +108,7 @@ class Result(JSONSerializable):
                 List of filtered Marks objects.
         """
         marks = []
-        for k, m in self.marks.items():
+        for _, m in self.marks.items():
             if m.total:
                 if min_marks <= m.total <= max_marks:
                     marks.append(m)
@@ -137,49 +144,3 @@ class Result(JSONSerializable):
 
     def __repr__(self):
         return "<Result sem={self.semester} roll={self.roll_num} name={self.student_name} batch={self.batch} cgpa={self.cgpa}>".format(self=self)
-
-
-class Student(JSONSerializable):
-    def __init__(self, roll_num, full_name=None, batch_year=None, programme_code=None,
-                 programme_name=None, institution_code=None, institution_name=None):
-        self.name = full_name
-        self.id = roll_num
-        self.batch = batch_year
-        self.results = {}
-        self.programme_code = programme_code
-        self.programme_name = programme_name
-        self.institution_code = institution_code
-        self.institution_name = institution_name
-
-    def iter_results(self):
-        """Return generator object of all results.
-        """
-        for sem in self.results:
-            yield self.results[sem]
-
-    def get_result_by_sem(self, sem):
-        return self.results[sem]
-
-    def add_result(self, res, semester):
-        """Add the result to results dict.
-
-        If result for semester is already present then it ignores current.
-        """
-        if not semester in self.results:
-            self.update_result(res, semester)
-        # else:
-        #     raise Exception("Result for semester {} is already present.".format(semester))
-
-    def update_result(self, res, semester):
-        """Update the result for given semester.
-        """
-        if isinstance(semester, int):
-            self.results[semester] = res
-        else:
-            raise TypeError("semester should be of int type")
-
-    def __str__(self):
-        return "{self.name} - {self.id} [{self.batch}]".format(self=self)
-
-    def __repr__(self):
-        return "<Student name={self.name} id={self.id} batch={self.batch}>".format(self=self)

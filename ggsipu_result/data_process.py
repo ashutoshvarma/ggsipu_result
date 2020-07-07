@@ -11,7 +11,7 @@ TODO:
 """
 
 
-from .objects import Student, Marks, Result, Subject
+from .objects import Marks, Result, Subject
 from .util import rm_extra_whitespace, group_iter
 import re
 from pyxpdf import Document
@@ -78,6 +78,36 @@ def _get_batch(data):
     RE_BATCH = re.compile(r'(?:Batch\D*:\s*0*)(\d+)')
     match = RE_BATCH.search(data)
     return int(match.group(1)) if match else None
+
+
+def _get_examination_name(data):
+    RE_EXAMINATION = re.compile(r'(?:Examination\s*:\s*)(.+)')
+    match = RE_EXAMINATION.search(data)
+    return match.group(1) if match else None
+
+
+def _get_programme(data):
+    RE_PROGRAMME_NAME = re.compile(r'(?:Programme\s+Name\s*:\s*)(.+?(?=Sem))')
+    RE_PROGRAMME_CODE = re.compile(
+        r'(?:Result\s+of\s+Programme\s+Code\s*:\s*)(\d+)')
+
+    match_name = RE_PROGRAMME_NAME.search(data)
+    match_code = RE_PROGRAMME_CODE.search(data)
+    code = match_code.group(1) if match_code else None
+    name = match_name.group(1) if match_name else None
+    return rm_extra_whitespace(code), rm_extra_whitespace(name)
+
+
+def _get_institution(data):
+    RE_INSTITUTION_NAME = re.compile(
+        r'(?:Institution\s*:\s*)(.+(?=CS/Remarks))')
+    RE_INSTITUTION_CODE = re.compile(r'(?:Institution\s+Code\s*:\s*)(\d+)')
+
+    match_name = RE_INSTITUTION_NAME.search(data)
+    match_code = RE_INSTITUTION_CODE.search(data)
+    code = match_code.group(1) if match_code else None
+    name = match_name.group(1) if match_name else None
+    return rm_extra_whitespace(code), rm_extra_whitespace(name)
 
 
 def _iter_paper_id_credits(data):
@@ -299,6 +329,7 @@ def iter_results(raw_data, force=False):
     raw_data = raw_data.splitlines()
 
     LINE_SEMESTER_BATCH = 17
+    LINE_INSTITUTION = 19
     GAP_TOTAL_MARKS = 4
     GAP_MARKS = 2
     GAP_NAME = 1
@@ -312,6 +343,13 @@ def iter_results(raw_data, force=False):
 
     semester = _get_semester(raw_data[LINE_SEMESTER_BATCH])
     batch = _get_batch(raw_data[LINE_SEMESTER_BATCH])
+    examination_name = _get_examination_name(raw_data[LINE_SEMESTER_BATCH])
+    programme_code, programme_name = _get_programme(
+        raw_data[LINE_SEMESTER_BATCH]
+    )
+    institution_code, institution_name = _get_institution(
+        raw_data[LINE_INSTITUTION]
+    )
 
     for i, line in enumerate(raw_data):
         roll_match = RE_ROLL_NUM.search(line)
@@ -329,7 +367,8 @@ def iter_results(raw_data, force=False):
             # Remove line till total marks, to avoid processing them again
             del raw_data[i: GAP_TOTAL_MARKS]
 
-            new_result = Result(roll_match.group(), semester, name, batch)
+            new_result = Result(roll_match.group(), semester, name, batch, examination_name, programme_code,
+                                programme_name, institution_code, institution_name)
             for paper_id_credit, mark, total_grade in zip(paper_id_credits, raw_marks, total_and_grades):
 
                 minor = int(mark[0]) if mark[0].isdigit() else None
