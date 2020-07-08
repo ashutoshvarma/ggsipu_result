@@ -204,11 +204,11 @@ def _get_subject(data):
         'type': sub_type, 'department': exam, 'mode': mode, 'kind': kind}
     """
     RE_SUBJ_DETAILS = re.compile(r"""
-                        (?P<index>\d{,2})\s*
-                        (?P<id>\d{5})\s*
-                        (?P<paper_code>\w{5})\s*
+                        (?P<index>\d{,2}?)\s*
+                        (?P<id>[A-Z,0-9]{5,8})\s*
+                        (?P<paper_code>\w+)\s*
                         (?P<name>(\D)+)
-                        (?P<credit>\d)\s*
+                        (?P<credit>\d{,2}?)\s*
                         (?P<type>\w+)\s*
                         (?P<exam>\w+)\s*
                         (?P<mode>\w+)\s*
@@ -287,7 +287,7 @@ def iter_subjects(raw_data, force=False):
 
     LINE_SEMESTER = 7  # Semester , Programme Code, Scheme ID
     LINE_SUBJ_START = 11  # Subject Details
-    SUBJ_GAP = 1    # Gap btw two consecutive subject lines
+    # SUBJ_GAP = 1    # Gap btw two consecutive subject lines
 
     # Check for data length
     if max((LINE_SEMESTER, LINE_SUBJ_START)) + 1 > len(raw_data):
@@ -295,7 +295,7 @@ def iter_subjects(raw_data, force=False):
 
     semester = _get_semester(raw_data[LINE_SEMESTER])
 
-    for raw in raw_data[LINE_SUBJ_START::SUBJ_GAP+1]:
+    for raw in raw_data[LINE_SUBJ_START:]:
         subj_details_dict = _get_subject(raw)
         if subj_details_dict:
             subj_details_dict['semester'] = semester
