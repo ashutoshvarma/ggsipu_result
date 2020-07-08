@@ -55,6 +55,11 @@ python -m unittest Tests.tests
 ```
 
 ## Changelog
+### v0.3.1 (08-07-2020)
+- fix NoneType error while searching for institution code and name in `iter_results`
+- API: remove `subject` attribute from `Marks`
+- toJSON: now handle case where \_\_dict\_\_ is not present.
+- API: add `toDict()` helper method to convert into python dict.
 ### v0.3 (08-07-2020) [Breaking Changes]
 - API: remove unused `Student` class
 - API: merge `Student` properties into `Result`.

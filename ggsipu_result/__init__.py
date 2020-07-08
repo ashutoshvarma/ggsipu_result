@@ -7,9 +7,9 @@ from .data_process import (
 )
 
 from .objects import Subject, Result, Marks
-from .util import toJSON
+from .util import toJSON, toDict
 
-__version__ = "0.3"
+__version__ = "0.3.1"
 
 
 def iter_pages(pdf, start=0, end=0):
