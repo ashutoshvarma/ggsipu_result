@@ -7,7 +7,7 @@ jobs:
     env: BUILD=1
   - python: 3.7
   - python: 3.6
-    env: TEST_TOX=1
+    env: TEST_TOX=1 
   - python: 3.5
 
 before_install:
@@ -23,10 +23,18 @@ script:
 - |
   if [ "${BUILD:-}" != "" ]; then
     python setup.py sdist bdist_wheel
-  elif [ "${TEST_TOX:-}" != "" ]; then
+  fi
+  python -m pip install . 
+  if [ "${TEST_TOX:-}" != "" ]; then
+    # tox does not use pyxpdf wheels, instead use sdist and
+    # pyxpdf fails to build without '-std=c++14', Remove this when
+    # either tox start using wheel for pyxpdf or pyxpdf can build without
+    # '-std=c++14' hack.
+    export CFLAGS='-std=c++14'
     python -m tox && codecov
   else
     pytest
+  fi
 before_deploy:
 - |
   if [ "${BUILD:-}" != "" ]; then

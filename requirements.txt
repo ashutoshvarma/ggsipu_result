@@ -1,1 +1,8 @@
 pyxpdf>=0.1.1
+pytest==5.4.3
+tox==3.16.1
+
+#build
+pip>=19.2.3
+setuptools>=41.2.0
+wheel>=0.34.2
