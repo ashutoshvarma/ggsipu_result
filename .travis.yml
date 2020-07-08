@@ -7,17 +7,26 @@ jobs:
     env: BUILD=1
   - python: 3.7
   - python: 3.6
+    env: TEST_TOX=1
   - python: 3.5
+
 before_install:
 - pip install -U pip setuptools wheel
 install:
-- pip install -r requirements.txt
+- |
+  if [ "${TEST_TOX:-}" != "" ]; then
+    pip install -r requirements.txt codecov
+  else
+    pip install -r requirements.txt
+  fi
 script:
-- python -m unittest Tests.tests
 - |
   if [ "${BUILD:-}" != "" ]; then
     python setup.py sdist bdist_wheel
-  fi
+  elif [ "${TEST_TOX:-}" != "" ]; then
+    python -m tox && codecov
+  else
+    pytest
 before_deploy:
 - |
   if [ "${BUILD:-}" != "" ]; then

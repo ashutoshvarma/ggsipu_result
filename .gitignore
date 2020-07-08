@@ -9,5 +9,9 @@ venv
 dist
 build
 
+# coverage
+htmlcov
+.coverage
+
 *.temp
 _test*.py
