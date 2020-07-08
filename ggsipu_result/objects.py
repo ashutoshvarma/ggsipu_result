@@ -1,13 +1,24 @@
 """Module having classes for data storing.
 """
 
-import json
 from .util import JSONSerializable
 
 
 class Subject(JSONSerializable):
-    def __init__(self, paper_id, paper_code=None, name=None, credit=None, minor_max=None,
-                 major_max=None, type=None, department=None, mode=None, kind=None, semester=None):
+    def __init__(
+        self,
+        paper_id,
+        paper_code=None,
+        name=None,
+        credit=None,
+        minor_max=None,
+        major_max=None,
+        type=None,
+        department=None,
+        mode=None,
+        kind=None,
+        semester=None,
+    ):
         self.paper_id = paper_id
         self.paper_code = paper_code
         self.name = name
@@ -34,7 +45,8 @@ class Subject(JSONSerializable):
         return "{self.paper_id}-{self.name}[{self.paper_code}]".format(self=self)
 
     def __repr__(self):
-        return "<Subject paper_id={self.paper_id} name={self.name} paper_code={self.paper_code}>".format(self=self)
+        f_repr = "<Subject paper_id={self.paper_id} name={self.name} paper_code={self.paper_code}>"
+        return f_repr.format(self=self)
 
     def __eq__(self, other):
         return self.paper_id == other
@@ -50,14 +62,25 @@ class Marks(JSONSerializable):
         self.paper_credit = paper_credit
 
     def __str__(self):
-        return "[{self.paper_id}]({self.paper_credit}) Minor-{self.minor}, Major-{self.major}, Total-{self.total}".format(self=self)
+        fstr = "[{self.paper_id}]({self.paper_credit}) Minor-{self.minor}, Major-{self.major}, Total-{self.total}"
+        return fstr.format(self=self)
 
 
 class Result(JSONSerializable):
-
-    def __init__(self, roll_num, semester, student_name=None, batch=None, examination_name=None,
-                 programme_code=None, programme_name=None, institution_code=None, institution_name=None,
-                 marks=None, image=None):
+    def __init__(
+        self,
+        roll_num,
+        semester,
+        student_name=None,
+        batch=None,
+        examination_name=None,
+        programme_code=None,
+        programme_name=None,
+        institution_code=None,
+        institution_name=None,
+        marks=None,
+        image=None,
+    ):
         self.semester = semester
         self.roll_num = roll_num
         self.student_name = student_name
@@ -125,12 +148,15 @@ class Result(JSONSerializable):
     def get_cgpa(self):
         """Get the CGPA for tha marks"""
 
-        grades = {'O': 10, 'A+': 9, 'A': 8, 'B+': 7, 'B': 6, 'C': 5, 'P': 4}
+        grades = {"O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5, "P": 4}
         total_credit = sum(
-            m.paper_credit if m.paper_credit else 0 for m in self.get_marks())
-        total = sum(grades.get(
-            m.grade, 0) * m.paper_credit if m.total and m.paper_credit else 0 for m in self.get_marks())
-        return round(total/total_credit, 2) if total and total_credit else 0
+            m.paper_credit if m.paper_credit else 0 for m in self.get_marks()
+        )
+        total = sum(
+            grades.get(m.grade, 0) * m.paper_credit if m.total and m.paper_credit else 0
+            for m in self.get_marks()
+        )
+        return round(total / total_credit, 2) if total and total_credit else 0
 
     cgpa = property(lambda self: self.get_cgpa(), None, None)
     """
@@ -139,7 +165,9 @@ class Result(JSONSerializable):
     """
 
     def __str__(self):
-        return "Result(Sem {self.semester}): [{self.roll_num}]{self.student_name}({self.batch}) [CGPA: {self.cgpa}]".format(self=self)
+        fstr = "Result(Sem {s.semester}): [{s.roll_num}]{s.student_name}({s.batch}) [CGPA: {s.cgpa}]"
+        return fstr.format(s=self)
 
     def __repr__(self):
-        return "<Result sem={self.semester} roll={self.roll_num} name={self.student_name} batch={self.batch} cgpa={self.cgpa}>".format(self=self)
+        f_repr = "<Result sem={s.semester} roll={s.roll_num} name={s.student_name} batch={s.batch} cgpa={s.cgpa}>"
+        return f_repr.format(self=self)

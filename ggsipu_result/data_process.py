@@ -11,14 +11,15 @@ TODO:
 """
 
 
-from .objects import Marks, Result, Subject
-from .util import rm_extra_whitespace, group_iter
 import re
+
 from pyxpdf import Document
 from pyxpdf.xpdf import PDFImageOutput, TextControl
 
+from .objects import Marks, Result, Subject
+from .util import group_iter, rm_extra_whitespace
 
-TEXT_LAYOUT_MODE = 'simple'
+TEXT_LAYOUT_MODE = "simple"
 
 IMG_CHECK_MIN = 1.8
 IMG_CHECK_MAX = 2.0
@@ -57,7 +58,7 @@ def _get_semester(data):
     Return:
         int type if semeter number found else None
     """
-    RE_SEMESTER = re.compile(r'(?:Sem\D*:\s*0*)(\d+)')
+    RE_SEMESTER = re.compile(r"(?:Sem\D*:\s*0*)(\d+)")
     match = RE_SEMESTER.search(data)
     return int(match.group(1)) if match else None
 
@@ -75,21 +76,20 @@ def _get_batch(data):
     Return:
         int type if batch year found else None
     """
-    RE_BATCH = re.compile(r'(?:Batch\D*:\s*0*)(\d+)')
+    RE_BATCH = re.compile(r"(?:Batch\D*:\s*0*)(\d+)")
     match = RE_BATCH.search(data)
     return int(match.group(1)) if match else None
 
 
 def _get_examination_name(data):
-    RE_EXAMINATION = re.compile(r'(?:Examination\s*:\s*)(.+)')
+    RE_EXAMINATION = re.compile(r"(?:Examination\s*:\s*)(.+)")
     match = RE_EXAMINATION.search(data)
     return match.group(1) if match else None
 
 
 def _get_programme(data):
-    RE_PROGRAMME_NAME = re.compile(r'(?:Programme\s+Name\s*:\s*)(.+?(?=Sem))')
-    RE_PROGRAMME_CODE = re.compile(
-        r'(?:Result\s+of\s+Programme\s+Code\s*:\s*)(\d+)')
+    RE_PROGRAMME_NAME = re.compile(r"(?:Programme\s+Name\s*:\s*)(.+?(?=Sem))")
+    RE_PROGRAMME_CODE = re.compile(r"(?:Result\s+of\s+Programme\s+Code\s*:\s*)(\d+)")
 
     match_name = RE_PROGRAMME_NAME.search(data)
     match_code = RE_PROGRAMME_CODE.search(data)
@@ -99,9 +99,8 @@ def _get_programme(data):
 
 
 def _get_institution(data):
-    RE_INSTITUTION_NAME = re.compile(
-        r'(?:Institution\s*:\s*)(.+(?=CS/Remarks))')
-    RE_INSTITUTION_CODE = re.compile(r'(?:Institution\s+Code\s*:\s*)(\d+)')
+    RE_INSTITUTION_NAME = re.compile(r"(?:Institution\s*:\s*)(.+(?=CS/Remarks))")
+    RE_INSTITUTION_CODE = re.compile(r"(?:Institution\s+Code\s*:\s*)(\d+)")
 
     match_name = RE_INSTITUTION_NAME.search(data)
     match_code = RE_INSTITUTION_CODE.search(data)
@@ -125,12 +124,11 @@ def _iter_paper_id_credits(data):
     Return:
         Generator object of (paper_id, paper_credit)
     """
-    RE_PAPER_ID = re.compile(
-        r'^(?P<paper_id>\d{5,6})\((?P<paper_credit>\d+)\)')
+    RE_PAPER_ID = re.compile(r"^(?P<paper_id>\d{5,6})\((?P<paper_credit>\d+)\)")
     for word in data.split():
         match = RE_PAPER_ID.search(word)
-        paper_id = match.group('paper_id') if match else None
-        paper_credit = match.group('paper_credit') if match else None
+        paper_id = match.group("paper_id") if match else None
+        paper_credit = match.group("paper_credit") if match else None
         if paper_id:
             yield int(paper_id), int(paper_credit)
 
@@ -172,19 +170,23 @@ def _iter_total_marks(data):
     # To ignore the first number in data.split() as they contain
     # serial num
     NUM_WORDS_IGNORE = 1
-    RE_BTW_PARANTHESES = re.compile(r"""
-                        \(          #Match Opening Parantheses
-                        ([^)]+)     #Match characters except ')' one or more (Capturing Group)
-                        \)          #Match Closing Parantheses
-                        """, re.VERBOSE)
+    RE_BTW_PARANTHESES = re.compile(
+        r"""
+            \(          #Match Opening Parantheses
+            ([^)]+)     #Match characters except ')' one or more (Capturing Group)
+            \)          #Match Closing Parantheses
+        """,
+        re.VERBOSE,
+    )
     data_split = data.split()[NUM_WORDS_IGNORE:]
     for line in data_split:
         ex_data = RE_BTW_PARANTHESES.split(line)
         # If first element is number then it is marks,
         # if not then it should be grade.
         marks = int(ex_data[0]) if ex_data[0].isdigit() else None
-        grade = ex_data[0] if marks == None else (
-            ex_data[1] if len(ex_data) > 1 else None)
+        grade = (
+            ex_data[0] if marks is None else (ex_data[1] if len(ex_data) > 1 else None)
+        )
         if marks or grade:
             yield marks, grade
 
@@ -203,40 +205,52 @@ def _get_subject(data):
         'credit': 2, 'minor_max': 40, 'major_max': 100,
         'type': sub_type, 'department': exam, 'mode': mode, 'kind': kind}
     """
-    RE_SUBJ_DETAILS = re.compile(r"""
-                        (?P<index>\d{,2}?)\s*
-                        (?P<id>[A-Z,0-9]{5,8})\s*
-                        (?P<paper_code>\w+)\s*
-                        (?P<name>(\D)+)
-                        (?P<credit>\d{,2}?)\s*
-                        (?P<type>\w+)\s*
-                        (?P<exam>\w+)\s*
-                        (?P<mode>\w+)\s*
-                        (?P<kind>\w+)\s*
-                        (?:(?P<minor_max>\d*)(?:--)?)\s*
-                        (?P<major_max>\d+)
-                        """, re.VERBOSE)
+    RE_SUBJ_DETAILS = re.compile(
+        r"""
+            (?P<index>\d{,2}?)\s*
+            (?P<id>\d{5,8})\s*
+            (?P<paper_code>\w+)\s*
+            (?P<name>(\D)+)
+            (?P<credit>\d{,2}?)\s*
+            (?P<type>\w+)\s*
+            (?P<exam>\w+)\s*
+            (?P<mode>\w+)\s*
+            (?P<kind>\w+)\s*
+            (?:(?P<minor_max>\d*)(?:--)?)\s*
+            (?P<major_max>\d+)
+        """,
+        re.VERBOSE,
+    )
 
     subj_match = RE_SUBJ_DETAILS.search(data)
     if subj_match:
-        sub_id = subj_match.group('id')
-        minor_max = subj_match.group('minor_max')
-        major_max = subj_match.group('major_max')
+        sub_id = subj_match.group("id")
+        minor_max = subj_match.group("minor_max")
+        major_max = subj_match.group("major_max")
         credit = subj_match.group("credit")
-        sub_type = subj_match.group('type')
-        exam = subj_match.group('exam')
-        kind = subj_match.group('kind')
-        mode = subj_match.group('mode')
-        paper_code = subj_match.group('paper_code')
-        name = rm_extra_whitespace(subj_match.group('name'))
+        sub_type = subj_match.group("type")
+        exam = subj_match.group("exam")
+        kind = subj_match.group("kind")
+        mode = subj_match.group("mode")
+        paper_code = subj_match.group("paper_code")
+        name = rm_extra_whitespace(subj_match.group("name"))
 
         # Validation
         minor_max = int(minor_max) if minor_max.isdigit() else None
         major_max = int(major_max) if major_max.isdigit() else None
 
-        return {'paper_id': sub_id, 'paper_code': paper_code, 'name': name,
-                'credit': credit, 'minor_max': minor_max, 'major_max': major_max,
-                'type': sub_type, 'department': exam, 'mode': mode, 'kind': kind}
+        return {
+            "paper_id": sub_id,
+            "paper_code": paper_code,
+            "name": name,
+            "credit": credit,
+            "minor_max": minor_max,
+            "major_max": major_max,
+            "type": sub_type,
+            "department": exam,
+            "mode": mode,
+            "kind": kind,
+        }
 
 
 def has_page_subejcts(pg_data):
@@ -298,7 +312,7 @@ def iter_subjects(raw_data, force=False):
     for raw in raw_data[LINE_SUBJ_START:]:
         subj_details_dict = _get_subject(raw)
         if subj_details_dict:
-            subj_details_dict['semester'] = semester
+            subj_details_dict["semester"] = semester
             yield Subject(**subj_details_dict)
 
 
@@ -339,17 +353,13 @@ def iter_results(raw_data, force=False):
         raise DataNotSufficientError
 
     # Match whole 11 digits number
-    RE_ROLL_NUM = re.compile(r'\b\d{11}\b')
+    RE_ROLL_NUM = re.compile(r"\b\d{11}\b")
 
     semester = _get_semester(raw_data[LINE_SEMESTER_BATCH])
     batch = _get_batch(raw_data[LINE_SEMESTER_BATCH])
     examination_name = _get_examination_name(raw_data[LINE_SEMESTER_BATCH])
-    programme_code, programme_name = _get_programme(
-        raw_data[LINE_SEMESTER_BATCH]
-    )
-    institution_code, institution_name = _get_institution(
-        raw_data[LINE_INSTITUTION]
-    )
+    programme_code, programme_name = _get_programme(raw_data[LINE_SEMESTER_BATCH])
+    institution_code, institution_name = _get_institution(raw_data[LINE_INSTITUTION])
 
     for i, line in enumerate(raw_data):
         roll_match = RE_ROLL_NUM.search(line)
@@ -359,23 +369,39 @@ def iter_results(raw_data, force=False):
             # list of (minor, major) marks
             raw_marks = list(_iter_marks(raw_data[i + GAP_MARKS]))
             # list of (total, grade)
-            total_and_grades = list(
-                _iter_total_marks(raw_data[i + GAP_TOTAL_MARKS]))
+            total_and_grades = list(_iter_total_marks(raw_data[i + GAP_TOTAL_MARKS]))
             # Name of student
             name = rm_extra_whitespace(raw_data[i + GAP_NAME])
 
             # Remove line till total marks, to avoid processing them again
-            del raw_data[i: GAP_TOTAL_MARKS]
+            del raw_data[i:GAP_TOTAL_MARKS]
 
-            new_result = Result(roll_match.group(), semester, name, batch, examination_name, programme_code,
-                                programme_name, institution_code, institution_name)
-            for paper_id_credit, mark, total_grade in zip(paper_id_credits, raw_marks, total_and_grades):
+            new_result = Result(
+                roll_match.group(),
+                semester,
+                name,
+                batch,
+                examination_name,
+                programme_code,
+                programme_name,
+                institution_code,
+                institution_name,
+            )
+            for paper_id_credit, mark, total_grade in zip(
+                paper_id_credits, raw_marks, total_and_grades
+            ):
 
                 minor = int(mark[0]) if mark[0].isdigit() else None
                 major = int(mark[1]) if mark[1].isdigit() else None
 
                 temp_mark = Marks(
-                    paper_id_credit[0], minor, major, total_grade[0], total_grade[1], paper_id_credit[1])
+                    paper_id_credit[0],
+                    minor,
+                    major,
+                    total_grade[0],
+                    total_grade[1],
+                    paper_id_credit[1],
+                )
                 new_result.add_mark(paper_id_credit[0], temp_mark)
             yield new_result
 
@@ -396,8 +422,7 @@ def _get_images_for_results(doc, page_index, results):
     attribute.
     """
     img_out = PDFImageOutput(doc)
-    imgs = [img for img in img_out.get(
-        page_index) if img.image_type == 'image']
+    imgs = [img for img in img_out.get(page_index) if img.image_type == "image"]
 
     if len(imgs) == len(results):
         for i, r in enumerate(results):

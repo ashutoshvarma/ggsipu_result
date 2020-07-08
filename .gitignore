@@ -9,6 +9,9 @@ venv
 dist
 build
 
+#tox
+.tox 
+
 # coverage
 htmlcov
 .coverage
