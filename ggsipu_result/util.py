@@ -4,12 +4,15 @@ import json
 
 class JSONSerializable:
     def toJSON(self, indent=4):
-        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=indent)
+        return toJSON(self, indent)
 
 
 def toJSON(self, indent=4):
     """Convert to json, for custom classes it jsonize their attribute dict(__dict__)."""
-    return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=indent)
+    return json.dumps(self, default=lambda o: o.__dict__ if hasattr(o, '__dict__') else '<not serializable>', sort_keys=True, indent=indent)
+
+def toDict(obj):
+    return json.loads(toJSON(obj))
 
 
 def rm_extra_whitespace(string):
