@@ -273,6 +273,28 @@ def has_page_results(pg_data):
     return True if match else False
 
 
+def _check_subject_details(details):
+    # def str_isdigit(*args):
+    #     for a in args:
+    #         if not a.isdigit():
+    #             return False
+    #     return True
+    def str_gr1(*args):
+        for a in args:
+            if not len(a) > 1:
+                return False
+        return True
+
+    return str_gr1(
+        details["paper_code"],
+        details["name"],
+        details["type"],
+        details["department"],
+        details["mode"],
+        details["kind"],
+    )
+
+
 def iter_subjects(raw_data, force=False):
     """Iterate through subjects extracted from page data.
 
@@ -311,7 +333,7 @@ def iter_subjects(raw_data, force=False):
 
     for raw in raw_data[LINE_SUBJ_START:]:
         subj_details_dict = _get_subject(raw)
-        if subj_details_dict:
+        if subj_details_dict and _check_subject_details(subj_details_dict):
             subj_details_dict["semester"] = semester
             yield Subject(**subj_details_dict)
 
