@@ -1,6 +1,6 @@
-import ggsipu_result
+from common_imports import file_in_resource_dir
 
-from .common_imports import file_in_resource_dir
+import ggsipu_result
 
 
 class TestDataProcess:

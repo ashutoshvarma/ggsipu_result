@@ -1,1 +1,3 @@
 include LICENSE README.md
+recursive-include Resources *.*
+recursive-include ggsipu_result/tests *.py
