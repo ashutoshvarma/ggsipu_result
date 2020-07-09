@@ -1,24 +1,14 @@
-import os
-import sys
-
 import ggsipu_result
 
-# Configure path environment
-TESTS_ROOT = os.path.abspath(os.path.dirname(__file__))
-SOURCE_ROOT = os.path.dirname(TESTS_ROOT)
-PROJECT_ROOT = os.path.dirname(SOURCE_ROOT)
-RESOURCE_ROOT = os.path.join(PROJECT_ROOT, "Resources")
-
-# Append project dir to PATH
-sys.path.append(PROJECT_ROOT)
+from .common_imports import file_in_resource_dir
 
 
 class TestDataProcess:
-    subject_data_file = os.path.join(RESOURCE_ROOT, "CSE_Result", "1.txt")
-    result_data_file = os.path.join(RESOURCE_ROOT, "CSE_Result", "58.txt")
+    subject_data_file = file_in_resource_dir("CSE_Result", "1.txt")
+    result_data_file = file_in_resource_dir("CSE_Result", "58.txt")
 
-    subject_file = os.path.join(RESOURCE_ROOT, "subjects.json")
-    result_file = os.path.join(RESOURCE_ROOT, "results.json")
+    subject_file = file_in_resource_dir("subjects.json")
+    result_file = file_in_resource_dir("results.json")
 
     def test_has_page_subjects(self):
         # Load data file
