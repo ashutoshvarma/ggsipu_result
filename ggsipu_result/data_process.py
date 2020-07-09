@@ -4,7 +4,7 @@
 This module provide classes to extract required data from
 string data formatted in a known manner. Extracted data will
 be returned in a suitable objects. For each type of string format
-there are specialised classes.
+there are specialized classes.
 
 TODO:
     None
@@ -38,7 +38,7 @@ class DataNotFoundError(DataProcessingError):
 
 
 def _get_scheme_dates(data):
-    """Get first occurance of date in 'dd/mm/yyy' format."""
+    """Get first occurrence of date in 'dd/mm/yyy' format."""
     # Capture Date of format dd/mm/yyy
     RE_DATE = re.compile(r"\d{2}/\d{2}/\d{4}")
     match = RE_DATE.search(data)
@@ -53,10 +53,10 @@ def _get_semester(data):
     other than digit + ':' + zero or more '0's
 
     Args:
-        data: single line of string having semeter details
+        data: single line of string having semester details
 
     Return:
-        int type if semeter number found else None
+        int type if semester number found else None
     """
     RE_SEMESTER = re.compile(r"(?:Sem\D*:\s*0*)(\d+)")
     match = RE_SEMESTER.search(data)
@@ -113,8 +113,8 @@ def _iter_paper_id_credits(data):
     """
     Iterate the paper ids in given data
 
-    Match 5 digit number followed by '(' with atleast one digit
-    and completed by ')' from begininig of each words in given
+    Match 5 digit number followed by '(' with at least one digit
+    and completed by ')' from beginning of each words in given
     'data' as paper ids are followed by their credit number.
     Example:- 98768(3) 98767(2)
 
@@ -164,7 +164,7 @@ def _iter_total_marks(data):
         data: single line of string having total marks and grade
 
     Return:
-        genrator object of type (total, grade).
+        generator object of type (total, grade).
     """
 
     # To ignore the first number in data.split() as they contain
@@ -276,9 +276,9 @@ def has_page_results(pg_data):
 def iter_subjects(raw_data, force=False):
     """Iterate through subjects extracted from page data.
 
-    Retieves the subject data from given page data assuming the
+    Retrieves the subject data from given page data assuming the
     data to be from pdftotext with -simple flag. If force param is False
-    it wont't check for data format.
+    it won't check for data format.
 
     Args:
         raw_data: Raw data of a single page.
@@ -291,7 +291,7 @@ def iter_subjects(raw_data, force=False):
     Raise:
         DataNotFoundError: When 'force' is True and data does not contain any
                             subject details.
-        DataNotSufficientError: When given data does not have minimum requried
+        DataNotSufficientError: When given data does not have minimum required
                                 lines for processing.
     """
     if force and not has_page_subjects(raw_data):
@@ -319,9 +319,9 @@ def iter_subjects(raw_data, force=False):
 def iter_results(raw_data, force=False):
     """Iterate through results extracted from page data.
 
-    Retieves the results data from given page data assuming the
+    Retrieves the results data from given page data assuming the
     data to be from pdftotext with -simple flag. If force param is False
-    it wont't check for data format.
+    it wont's check for data format.
 
     Args:
         raw_data: Raw data of a single page.
@@ -334,7 +334,7 @@ def iter_results(raw_data, force=False):
     Raise:
         DataNotFoundError: When 'force' is True and data does not contain any
                             result details.
-        DataNotSufficientError: When given data does not have minimum requried
+        DataNotSufficientError: When given data does not have minimum required
                                 lines for processing.
     """
     if force and not has_page_results(raw_data):
@@ -411,9 +411,9 @@ def _check_for_image(doc, page_index, result, img):
     Check whether roll number's bbox's x1 and image's bbox's
     x1 is close enough.
     """
-    tbbox = doc[page_index].find_text(result.roll_num)
-    ibbox = img.bbox
-    return IMG_CHECK_MIN < tbbox[1] - ibbox[1] <= IMG_CHECK_MAX
+    t_bbox = doc[page_index].find_text(result.roll_num)
+    i_bbox = img.bbox
+    return IMG_CHECK_MIN < t_bbox[1] - i_bbox[1] <= IMG_CHECK_MAX
 
 
 def _get_images_for_results(doc, page_index, results):
@@ -441,7 +441,7 @@ def parse_result_pdf(pdf, get_images=True):
     """Parse the entire results PDF and gives all `Results` and `Subjects`
 
     Retrives results and subjects details data from pdf and if `get_images`
-    then also save photo (if exixts) of each student in respective
+    then also save photo (if exists) of each student in respective
     `Result.image` attribute.
 
     Example:
