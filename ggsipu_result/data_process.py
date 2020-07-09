@@ -253,7 +253,7 @@ def _get_subject(data):
         }
 
 
-def has_page_subejcts(pg_data):
+def has_page_subjects(pg_data):
     """Check if page contains subjects data.
     """
 
@@ -294,7 +294,7 @@ def iter_subjects(raw_data, force=False):
         DataNotSufficientError: When given data does not have minimum requried
                                 lines for processing.
     """
-    if force and not has_page_subejcts(raw_data):
+    if force and not has_page_subjects(raw_data):
         raise DataNotFoundError
 
     raw_data = raw_data.splitlines()
@@ -471,7 +471,7 @@ def parse_result_pdf(pdf, get_images=True):
     control = TextControl(mode=TEXT_LAYOUT_MODE)
     for p in doc:
         text = p.text(control=control)
-        if has_page_subejcts(text):
+        if has_page_subjects(text):
             for sub in iter_subjects(text):
                 subs[sub.paper_id] = sub
         elif has_page_results(text):
