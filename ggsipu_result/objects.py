@@ -170,4 +170,4 @@ class Result(JSONSerializable):
 
     def __repr__(self):
         f_repr = "<Result sem={s.semester} roll={s.roll_num} name={s.student_name} batch={s.batch} cgpa={s.cgpa}>"
-        return f_repr.format(self=self)
+        return f_repr.format(s=self)
