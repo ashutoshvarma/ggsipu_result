@@ -13,7 +13,7 @@ from .data_process import (
 from .objects import Marks, Result, Subject
 from .util import toDict, toJSON
 
-__version__ = "0.3.2"
+__version__ = "0.3.3"
 
 __all__ = [
     "DataNotFoundError",

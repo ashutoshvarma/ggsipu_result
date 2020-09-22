@@ -55,6 +55,8 @@ python -m unittest Tests.tests
 ```
 
 ## Changelog
+### v0.3.3 (22-09-2020)
+- Fix minor typo in `Results` repr
 ### v0.3.2 (09-07-2020)
 - Major improvement in iter_subjects, now more accurate parsing
 ### v0.3.1 (08-07-2020)
