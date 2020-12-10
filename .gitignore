@@ -17,4 +17,4 @@ htmlcov
 .coverage
 
 *.temp
-_test*.py
+_test*.*
