@@ -11,5 +11,5 @@ for page in iter_pages(FILE):
             if res.batch == 2018:
                 cgpa.append(res.cgpa)
 
-avg_cgpa = sum(i for i in cgpa)/len(cgpa)
+avg_cgpa = sum(i for i in cgpa) / len(cgpa)
 print(avg_cgpa)

@@ -1,5 +1,6 @@
 from ggsipu_result import iter_pages, has_page_results, iter_results
-FILE = 'document1.pdf'
+
+FILE = "document1.pdf"
 
 
 for page in iter_pages(FILE):
