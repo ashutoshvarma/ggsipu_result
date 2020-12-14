@@ -1,5 +1,5 @@
 pyxpdf>=0.1.1
-pytest==6.0.0
+pytest==6.2.0
 tox==3.19.0
 
 #build
